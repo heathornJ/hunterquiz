@@ -4,14 +4,17 @@ import QuizScreen from "./components/QuizScreen";
 import useNavigation from "./hooks/useNavigation";
 
 function App() {
+  /* Deconstructs the screen state and navigateTo function from useNavigation */
   const { screen, navigateTo} = useNavigation()
 
+  /* object containing functions used to setState on button click */
   const navigationHandlers = {
     home: () => navigateTo('home'),
     start: () => navigateTo('start'),
     help: () => navigateTo('help')
   }
 
+  /* Switch to determine which Screen component should be displayed, passes relevant setState through as props for the buttons within that screen */
   const renderScreen = () => {
     switch (screen) {
       case "home":
@@ -25,6 +28,7 @@ function App() {
     }
   }
 
+  /* Renders the Screen component */
   return (
     <div className="App">
       <h1>Hunter Quiz</h1>
