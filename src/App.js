@@ -1,34 +1,27 @@
-import { useState } from "react";
-
 import HomeScreen from "./components/HomeScreen";
 import HelpScreen from "./components/HelpScreen";
 import QuizScreen from "./components/QuizScreen";
+import useNavigation from "./hooks/useNavigation";
 
 function App() {
-  const [screen, setScreen] = useState("home");
-  
-  const handleHome =() => {
-    setScreen("home")
-  }
-  
-  const handleHelp = () => {
-    setScreen("help");
-  }
+  const { screen, navigateTo} = useNavigation()
 
-  const handleStart = () => {
-    setScreen("start");
+  const navigationHandlers = {
+    home: () => navigateTo('home'),
+    start: () => navigateTo('start'),
+    help: () => navigateTo('help')
   }
 
   const renderScreen = () => {
     switch (screen) {
       case "home":
-        return <HomeScreen onStart={handleStart} onHelp={handleHelp}/>;
+        return <HomeScreen onStart={navigationHandlers.start} onHelp={navigationHandlers.help}/>;
       case "help":
-        return <HelpScreen onHome={handleHome}/>;
+        return <HelpScreen onHome={navigationHandlers.home}/>;
       case "start":
-        return <QuizScreen onHome={handleHome}/>;
+        return <QuizScreen onHome={navigationHandlers.home}/>;
       default:
-        return <HomeScreen onHelp={handleHelp}/>;
+        return <HomeScreen onStart={navigationHandlers.start} onHelp={navigationHandlers.help}/>;
     }
   }
 
