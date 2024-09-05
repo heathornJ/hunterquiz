@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import questions from '../data/questions';
+import NextButton from './NextButton';
 
 function QuizScreen (props) {
     //State for the question array index
@@ -17,12 +18,6 @@ function QuizScreen (props) {
         }
 
         /*TODO: Highlight red, display Next button */
-    }
-
-    const handleNextQuestionClick = () => {
-        if (questionIndex < questions.length - 1) {
-            setQuestionIndex(questionIndex + 1);
-        }
     }
     
     return (
@@ -45,7 +40,7 @@ function QuizScreen (props) {
             </div>
             <div className='nav-buttons'>
                 {/*TODO: Render after button has been selected */}
-                <button onClick={handleNextQuestionClick}>Next</button>
+                <NextButton currentIndex={questionIndex} setIndex={setQuestionIndex} arrayLength={questions.length}/>
             </div>
         </div>
     )

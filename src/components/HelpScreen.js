@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import NextButton from './NextButton';
+import PreviousButton from './PreviousButton';
 
 
 
@@ -11,13 +13,6 @@ function HelpScreen (props) {
         "I am index 0 of help content",
         "I am index 1 of help content"
     ]
-
-    // Sets the state to the next index of the helpContent array.
-    const handleNextInfoClick = () => {
-        if (currentInfoIndex < helpContent.length - 1) {
-            setCurrentInfoIndex(currentInfoIndex + 1);
-        }
-    }
 
     // Sets the state to the previous index of the helpContent array
     const handlePreviousInfoClick = () => {
@@ -33,10 +28,10 @@ function HelpScreen (props) {
             
             <p>{helpContent[currentInfoIndex]}</p>
             <div className='nav-buttons'>
-                <button onClick={handlePreviousInfoClick}>Back</button>
+                {currentInfoIndex > 0 ? <PreviousButton currentIndex={currentInfoIndex} setIndex={setCurrentInfoIndex}/> : ""}
                 
                 {/* Only displays the next button if the next index in the helpContent array exists */}
-                {currentInfoIndex === helpContent.length-1 ? "" : <button onClick={handleNextInfoClick}>Next</button>}
+                {currentInfoIndex === helpContent.length-1 ? "" : <NextButton currentIndex={currentInfoIndex} setIndex={setCurrentInfoIndex} arrayLength={helpContent.length}/>}
             </div>
         </div>
     )
