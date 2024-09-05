@@ -18,6 +18,12 @@ function QuizScreen (props) {
 
         /*TODO: Highlight red, display Next button */
     }
+
+    const handleNextQuestionClick = () => {
+        if (questionIndex < questions.length - 1) {
+            setQuestionIndex(questionIndex + 1);
+        }
+    }
     
     return (
         <div className='quizscreen-container'>
@@ -39,7 +45,7 @@ function QuizScreen (props) {
             </div>
             <div className='nav-buttons'>
                 {/*TODO: Render after button has been selected */}
-                <button>Next</button>
+                <button onClick={handleNextQuestionClick}>Next</button>
             </div>
         </div>
     )
