@@ -4,7 +4,7 @@ const questions = [
         id: 0,
         question: "This is the first question",
         answers: [
-            {text:"a", isCorrect: true},
+            {text:"correctAnswer", isCorrect: true},
             {text:"b", isCorrect: false},
             {text:"c", isCorrect: false},
             {text:"d", isCorrect: false}

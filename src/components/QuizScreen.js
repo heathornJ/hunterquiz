@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import questions from '../data/questions';
 import NextButton from './NextButton';
+import useScore from '../hooks/useScore'
 
 function QuizScreen (props) {
     //State for the question array index
@@ -10,14 +11,34 @@ function QuizScreen (props) {
     //Retrieves the question object from the question array.
     const currentQuestion = questions[questionIndex]
 
-    const handleAnswerClick = (isCorrect) => {
-        /*TODO: Disable Button Clicks*/
-        
+    //Gain access to the score state variable and state setter function from useScore.
+    const { score, updateScore } = useScore();
+    
+
+    const handleAnswerClick = (event, isCorrect) => {
+        //Gets an array of all buttons with the 'answer-button' class
+        const buttons = document.querySelectorAll('.answer-button');
+        //Gets the button that was clicked.
+        const targetButton = event.target;
+
+        const navButtons = document.querySelector('.nav-buttons')
+
+        //Disables each button after one has been pressed.
+        buttons.forEach(button => {
+            button.disabled = true;
+        })
+            
         if (isCorrect) {
-            /*TODO: Highlight green, add score*/
+            updateScore();
+            //Sets the id of button to correct-answer. CSS will modify this to appear green.
+            targetButton.id = "correct-answer";
         }
 
-        /*TODO: Highlight red, display Next button */
+        if (!isCorrect) {
+            //Sets the ide of button to incorrect-answer. CSS will modify this to appear red.
+            targetButton.id = "incorrect-answer";
+        }
+
     }
     
     return (
@@ -33,7 +54,7 @@ function QuizScreen (props) {
 
                 {/* Creates a button for each answer within the question's answer array */}
                 {currentQuestion.answers.map((answer, index) => (
-                    <button key={index} onClick={() => handleAnswerClick(answer.isCorrect)}>
+                    <button className='answer-button' key={index} disabled={false} onClick={(event) => handleAnswerClick(event, answer.isCorrect)}>
                         {answer.text}
                     </button>
                 ))}
