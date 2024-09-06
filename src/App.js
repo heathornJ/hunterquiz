@@ -1,7 +1,8 @@
+import useNavigation from "./hooks/useNavigation";
 import HomeScreen from "./components/HomeScreen";
 import HelpScreen from "./components/HelpScreen";
 import QuizScreen from "./components/QuizScreen";
-import useNavigation from "./hooks/useNavigation";
+import ResultScreen from "./components/ResultScreen";
 
 function App() {
   /* Deconstructs the screen state and navigateTo function from useNavigation */
@@ -23,6 +24,8 @@ function App() {
         return <HelpScreen onHome={navigationHandlers.home}/>;
       case "start":
         return <QuizScreen onHome={navigationHandlers.home}/>;
+      case "result":
+        return <ResultScreen onStart={navigationHandlers.start} onHome={navigationHandlers.home}/>;
       default:
         return <HomeScreen onStart={navigationHandlers.start} onHelp={navigationHandlers.help}/>;
     }
