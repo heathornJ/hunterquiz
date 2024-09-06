@@ -56,6 +56,7 @@ function QuizScreen (props) {
             <div className='nav-buttons'>
                 {/* Only renders the NextButton component if the showNextButton true & it is not the final question. Prevents the user from moving to the next question without selecting an answer first */}
                 {showNextButton && questionIndex < questions.length - 1 ? <NextButton currentIndex={questionIndex} setIndex={setQuestionIndex} arrayLength={questions.length} setShowNextButton={setShowNextButton} setButtonDisabled={setButtonDisabled}/> : ""}
+                {showNextButton && questionIndex == questions.length -1 ? <button onClick={props.onResult}>See Results</button> : ""}
             </div>
         </div>
     )

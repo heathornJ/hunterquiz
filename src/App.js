@@ -11,7 +11,8 @@ function App() {
   const navigationHandlers = {
     home: () => navigateTo('home'),
     start: () => navigateTo('start'),
-    help: () => navigateTo('help')
+    help: () => navigateTo('help'),
+    result: () => navigateTo('result')
   }
 
   /* Switch to determine which Screen component should be displayed, passes relevant setState through as props for the buttons within that screen */
@@ -22,7 +23,7 @@ function App() {
       case "help":
         return <HelpScreen onHome={navigationHandlers.home}/>;
       case "start":
-        return <QuizScreen onHome={navigationHandlers.home}/>;
+        return <QuizScreen onHome={navigationHandlers.home} onResult={navigationHandlers.result}/>;
       case "result":
         return <ResultScreen onStart={navigationHandlers.start} onHome={navigationHandlers.home}/>;
       default:
