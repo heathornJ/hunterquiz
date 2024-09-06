@@ -8,7 +8,11 @@ function useScore () {
         setScore(score + 1);
     };
 
-    return {score, updateScore};
+    const resetScore = () => {
+        setScore(0);
+    }
+
+    return {score, updateScore, resetScore};
 }
 
 export default useScore;

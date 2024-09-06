@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import questions from '../data/questions';
 import NextButton from './NextButton';
-import useScore from '../hooks/useScore'
 
 function QuizScreen (props) {
     //State for the question array index
@@ -14,7 +13,6 @@ function QuizScreen (props) {
     //Retrieves the question object from the question array.
     const currentQuestion = questions[questionIndex]
     //Gain access to the score state variable and state setter function from useScore.
-    const { score, updateScore } = useScore();
     
     const handleAnswerClick = (event, isCorrect) => {
         //Gets the button that was clicked.
@@ -23,7 +21,7 @@ function QuizScreen (props) {
         setButtonDisabled(true);
             
         if (isCorrect) {
-            updateScore();
+            props.updateScore();
             //Sets the id of button to correct-answer. CSS will modify this to appear green.
             targetButton.id = "correct-answer";
         }
