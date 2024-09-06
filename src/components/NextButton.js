@@ -1,7 +1,7 @@
 import React from "react";
 
 /* Next button component. Accepts state variable, state setter, and array length to move onto the next index in an array. */
-function NextButton ({ currentIndex, setIndex, arrayLength, setShowNextButton}) {
+function NextButton ({ currentIndex, setIndex, arrayLength, setShowNextButton, setButtonDisabled}) {
     const maxIndex = arrayLength - 1;
     const handleNextClick = () => {
         if (currentIndex < arrayLength - 1) {
@@ -12,6 +12,11 @@ function NextButton ({ currentIndex, setIndex, arrayLength, setShowNextButton}) 
         if (setShowNextButton) {
         setShowNextButton(false);
         };
+
+        //Re-enables answers buttons on the QuizScreen when the next button is press.
+        if (setButtonDisabled) {
+            setButtonDisabled(false)
+        }
     }
 
     return (
