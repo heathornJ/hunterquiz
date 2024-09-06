@@ -1,7 +1,6 @@
 import React from 'react';
 
 function ResultScreen (props) {
-
     const score = "-";
     const maxScore = "-";
     const rank = "-";

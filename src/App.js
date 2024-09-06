@@ -7,7 +7,6 @@ import ResultScreen from "./components/ResultScreen";
 function App() {
   /* Deconstructs the screen state and navigateTo function from useNavigation */
   const { screen, navigateTo} = useNavigation()
-
   /* object containing functions used to setState on button click */
   const navigationHandlers = {
     home: () => navigateTo('home'),

@@ -13,7 +13,6 @@ function HelpScreen (props) {
         "I am index 0 of help content",
         "I am index 1 of help content"
     ]
-
     // Sets the state to the previous index of the helpContent array
     const handlePreviousInfoClick = () => {
         if (currentInfoIndex > 0) {

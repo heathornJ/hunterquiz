@@ -7,21 +7,19 @@ import useScore from '../hooks/useScore'
 function QuizScreen (props) {
     //State for the question array index
     const [questionIndex, setQuestionIndex] = useState(0);
-    
+    //State for displaying the NextButton component
+    const [showNextButton, setShowNextButton] = useState(false);
     //Retrieves the question object from the question array.
     const currentQuestion = questions[questionIndex]
-
     //Gain access to the score state variable and state setter function from useScore.
     const { score, updateScore } = useScore();
     
-
     const handleAnswerClick = (event, isCorrect) => {
         //Gets an array of all buttons with the 'answer-button' class
         const buttons = document.querySelectorAll('.answer-button');
         //Gets the button that was clicked.
         const targetButton = event.target;
-
-        const navButtons = document.querySelector('.nav-buttons')
+        setShowNextButton(true);
 
         //Disables each button after one has been pressed.
         buttons.forEach(button => {
@@ -60,8 +58,8 @@ function QuizScreen (props) {
                 ))}
             </div>
             <div className='nav-buttons'>
-                {/*TODO: Render after button has been selected */}
-                <NextButton currentIndex={questionIndex} setIndex={setQuestionIndex} arrayLength={questions.length}/>
+                {/* Only renders the NextButton component if the showNextButton true. Prevents the user from moving to the next question without selecting an answer first */}
+                {showNextButton ? <NextButton currentIndex={questionIndex} setIndex={setQuestionIndex} arrayLength={questions.length} setShowNextButton={setShowNextButton}/> : ""}
             </div>
         </div>
     )
