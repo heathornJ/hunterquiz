@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import questions from '../data/questions';
 import NextButton from './NextButton';
@@ -10,9 +10,17 @@ function QuizScreen (props) {
     const [showNextButton, setShowNextButton] = useState(false);
     //State for answer buttons being disabled.
     const [buttonDisabled, setButtonDisabled] = useState(false)
-    //Retrieves the question object from the question array.
-    const currentQuestion = questions[questionIndex]
-    //Gain access to the score state variable and state setter function from useScore.
+    //State to store shuffled questions
+    const [shuffledQuestions, setShuffledQuestions] = useState([]);
+    
+    // Fisher-Yates Sorting Algorithm used to randomise question order
+    const shuffle = (array) => { 
+    for (let i = array.length - 1; i > 0; i--) { 
+        const j = Math.floor(Math.random() * (i + 1)); 
+        [array[i], array[j]] = [array[j], array[i]]; 
+    } 
+    return array; 
+    }; 
     
     const handleAnswerClick = (event, isCorrect) => {
         //Gets the button that was clicked.
@@ -32,6 +40,20 @@ function QuizScreen (props) {
         }
 
     }
+
+    // shuffle called within useEffect so that it is only shuffled when the quizComponent is rendered, not re-rendered.
+    useEffect(() => {
+        const shuffledArray = shuffle([...questions]) // Avoids modifying the original questions array.
+        setShuffledQuestions(shuffledArray);
+    }, []);
+
+    //Protects against shuffledQuestions to being ready until after first render
+    if (shuffledQuestions.length === 0 || !shuffledQuestions[questionIndex]) {
+        return <div>Loading...</div>
+    }
+
+    //Gets the currentQuestion from the shuffledQuestions array.
+    const currentQuestion = shuffledQuestions[questionIndex];
     
     return (
         <div className='quizscreen-container'>
