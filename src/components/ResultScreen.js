@@ -1,15 +1,29 @@
 import React from 'react';
 import StartButton from './StartButton';
+import ranks from '../data/ranks';
 
 function ResultScreen (props) {
-    const maxScore = "-";
-    const rank = "-";
+    const score = props.score
+    let maxScore = "-";
+    let rank = "-";
+
+    /* 
+    Iterates through the ranks array. Checks the score is greater than the minScore of that rank object.
+    Also checks that the current rank minScore property is greater than the previous rank (accumulator), 
+    and returns that if the score is also greater than it.
+    Always returns the rank with the highest minScore property that the score is greater than or equal to
+    */
+    const currentRank = ranks.reduce((accumulator, rank) => {
+        return (rank.minScore <= score && rank.minScore > accumulator.minScore) ? rank : accumulator;
+    }, ranks[0])
+
+    rank = currentRank.rank;
 
     return (
         <div className='resultscreen-container'>
             <div className='result-text-container'>
                 <h2>Results</h2>
-                <p>You answered {props.score} questions correctly out of {maxScore}!</p>
+                <p>You answered {score} questions correctly out of {maxScore}!</p>
                 <p>This earns you the rank of: {rank}</p>
             </div>
             <div className='nav-buttons'>
