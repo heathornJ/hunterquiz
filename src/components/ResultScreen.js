@@ -1,11 +1,12 @@
 import React from 'react';
 import StartButton from './StartButton';
 import ranks from '../data/ranks';
+import questions from '../data/questions';
 
 function ResultScreen (props) {
     const score = props.score
-    let maxScore = "-";
-    let rank = "-";
+    let maxScore = questions.length;
+    let rank = ranks[0].rank;
 
     /* 
     Iterates through the ranks array. Checks the score is greater than the minScore of that rank object.
