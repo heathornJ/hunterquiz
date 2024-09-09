@@ -12,7 +12,12 @@ function QuizScreen (props) {
     const [buttonDisabled, setButtonDisabled] = useState(false)
     //State to store shuffled questions
     const [shuffledQuestions, setShuffledQuestions] = useState([]);
+    // State for shuffled answers
+    const [shuffledAnswers, setShuffledAnswers] = useState([]);
     
+    //Gets the currentQuestion from the shuffledQuestions array.
+    const currentQuestion = shuffledQuestions[questionIndex];
+
     // Fisher-Yates Sorting Algorithm used to randomise question order
     const shuffle = (array) => { 
     for (let i = array.length - 1; i > 0; i--) { 
@@ -38,22 +43,31 @@ function QuizScreen (props) {
             //Sets the ide of button to incorrect-answer. CSS will modify this to appear red.
             targetButton.id = "incorrect-answer";
         }
-
     }
 
-    // shuffle called within useEffect so that it is only shuffled when the quizComponent is rendered, not re-rendered.
+    // Shuffle called within useEffect so that it is only shuffled when the quizComponent is rendered, not re-rendered.
     useEffect(() => {
         const shuffledArray = shuffle([...questions]) // Avoids modifying the original questions array.
         setShuffledQuestions(shuffledArray);
     }, []);
 
+    /* Shuffle answers when a new question is loaded and is a multiple-choice question. 
+       Only attempts to shuffle answers when the questions are shuffled.
+    */
+    useEffect(() => {
+        if (shuffledQuestions.length > 0) {
+            if (currentQuestion.type === 'multiple-choice') {
+                setShuffledAnswers(shuffle(currentQuestion.answers));
+            } else {
+                setShuffledAnswers(currentQuestion.answers);
+            }
+        }
+    }, [questionIndex, shuffledQuestions]);
+
     //Protects against shuffledQuestions to being ready until after first render
     if (shuffledQuestions.length === 0 || !shuffledQuestions[questionIndex]) {
         return <div>Loading...</div>
     }
-
-    //Gets the currentQuestion from the shuffledQuestions array.
-    const currentQuestion = shuffledQuestions[questionIndex];
     
     return (
         <div className='quizscreen-container'>
@@ -67,7 +81,7 @@ function QuizScreen (props) {
             <div className='answer-Container'>
 
                 {/* Creates a button for each answer within the question's answer array */}
-                {currentQuestion.answers.map((answer, index) => (
+                {shuffledAnswers.map((answer, index) => (
                     <button className='answer-button' key={index} disabled={buttonDisabled} onClick={(event) => handleAnswerClick(event, answer.isCorrect)}>
                         {answer.text}
                     </button>
