@@ -38,6 +38,8 @@ p {
     border: 3px blue dashed;
 }
 
+/* General Buttons */
+
 button {
     background-image: url('./images/button-background.png');
     background-size: 100% 100%;
@@ -49,10 +51,12 @@ button:hover {
     color: rgb(255, 163, 97);
 }
 
+/* Fades the button out slightly when disabled */
 button:disabled {
     background-blend-mode: overlay;
 }
 
+/* Hides the hover effect when button is disabled. Must match color set for button style above. */
 button:disabled:hover {
     color: #ffffff;
 }
@@ -72,6 +76,7 @@ button:disabled:hover {
     left: 1em;
     height: 3em;
     width: 3em;
+    background-image: url(./images/home-button-background.png);
 }
 
 .nav-buttons {

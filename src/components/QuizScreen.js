@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 import questions from '../data/questions';
 import NextButton from './NextButton';
+/* 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faHouse} from '@fortawesome/free-solid-svg-icons'
+*/
 
 function QuizScreen (props) {
     //State for the question array index
@@ -73,7 +75,7 @@ function QuizScreen (props) {
     
     return (
         <div className='screen-container quizscreen-container'>
-            <button className='home-button' onClick={props.onHome}><FontAwesomeIcon icon={faHouse} /></button>
+            <button className='home-button' onClick={props.onHome}>{/*}<FontAwesomeIcon icon={faHouse} /> */}</button>
 
             {/* Sets the question number based of the current index */}
             <h2>Question {questionIndex + 1}</h2>
