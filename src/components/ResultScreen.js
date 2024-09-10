@@ -21,7 +21,7 @@ function ResultScreen (props) {
     rank = currentRank.rank;
 
     return (
-        <div className='resultscreen-container'>
+        <div className='screen-container resultscreen-container'>
             <div className='result-text-container'>
                 <h2>Results</h2>
                 <p>You answered {score} questions correctly out of {maxScore}!</p>

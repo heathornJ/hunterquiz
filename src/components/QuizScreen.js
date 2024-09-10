@@ -70,7 +70,7 @@ function QuizScreen (props) {
     }
     
     return (
-        <div className='quizscreen-container'>
+        <div className='screen-container quizscreen-container'>
             <button className='home-button' onClick={props.onHome}>Home</button>
 
             {/* Sets the question number based of the current index */}
@@ -78,7 +78,7 @@ function QuizScreen (props) {
             
             {/* Displays the question stored in the question object */}
             <p>{currentQuestion.question}</p>
-            <div className='answer-Container'>
+            <div className='answer-container'>
 
                 {/* Creates a button for each answer within the question's answer array */}
                 {shuffledAnswers.map((answer, index) => (

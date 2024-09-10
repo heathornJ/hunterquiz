@@ -43,7 +43,6 @@ function App() {
   /* Renders the Screen component */
   return (
     <div className="App">
-      <h1>Hunter Quiz</h1>
       {renderScreen()}
     </div>
   );
