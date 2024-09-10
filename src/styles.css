@@ -47,6 +47,14 @@ p {
 
 /* Nav-Buttons */
 
+.home-button {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    height: 3em;
+    width: 3em;
+}
+
 .nav-buttons {
     display: flex;
     flex-direction: column;

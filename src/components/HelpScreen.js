@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import NextButton from './NextButton';
 import PreviousButton from './PreviousButton';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faHouse} from '@fortawesome/free-solid-svg-icons'
 
 
 function HelpScreen (props) {
@@ -18,7 +19,7 @@ function HelpScreen (props) {
 
     return (
         <div className='screen-container helpscreen-container'>
-            <button className='home-button' onClick={props.onHome}>Home</button>
+            <button className='home-button' onClick={props.onHome}><FontAwesomeIcon icon={faHouse} /></button>
             <h2>Help</h2>
             
             <p>{helpContent[currentInfoIndex]}</p>
