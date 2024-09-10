@@ -38,6 +38,25 @@ p {
     border: 3px blue dashed;
 }
 
+button {
+    background-image: url('./images/button-background.png');
+    background-size: 100% 100%;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+button:hover {
+    color: rgb(255, 163, 97);
+}
+
+button:disabled {
+    background-blend-mode: overlay;
+}
+
+button:disabled:hover {
+    color: #ffffff;
+}
+
 /* Outer div for each Screen component */
 .screen-container {
     border: solid;
