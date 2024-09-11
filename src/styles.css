@@ -8,6 +8,10 @@
 body {
     margin: 0;
     background-color: lightgray; /*Temporary*/
+    background-image: url('./images/general-background.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
 }
 
@@ -19,7 +23,7 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 3em;
     text-align: center;
-    
+    margin-top: 0;
 }
 
 h2 {
@@ -35,7 +39,7 @@ p {
 
 .App {
     height: 100%;
-    border: 3px blue dashed;
+    /* border: 3px blue dashed; */
 }
 
 /* General Buttons */
@@ -63,7 +67,7 @@ button:disabled:hover {
 
 /* Outer div for each Screen component */
 .screen-container {
-    border: solid;
+    /* border: solid; */
     height: 100%;
 }
 
