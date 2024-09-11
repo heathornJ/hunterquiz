@@ -82,7 +82,7 @@ function QuizScreen (props) {
                 <h2>Question {questionIndex + 1}</h2>
                 
                 {/* Displays the question stored in the question object */}
-                <p>{currentQuestion.question}</p>
+                <p className='current-question'>{currentQuestion.question}</p>
                 <div className='answer-container'>
 
                     {/* Creates a button for each answer within the question's answer array */}

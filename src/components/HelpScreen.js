@@ -22,14 +22,16 @@ function HelpScreen (props) {
     return (
         <div className='screen-container helpscreen-container'>
             <button className='home-button' onClick={props.onHome}>{/*}<FontAwesomeIcon icon={faHouse} /> */} </button>
-            <h2>Help</h2>
-            
-            <p>{helpContent[currentInfoIndex]}</p>
-            <div className='nav-buttons' id='help-nav-buttons'>
-                {/* Only displays the next button if the next index in the helpContent array exists */}
-                {currentInfoIndex === helpContent.length-1 ? "" : <NextButton currentIndex={currentInfoIndex} setIndex={setCurrentInfoIndex} arrayLength={helpContent.length}/>}
-                {/* Only displays the back button if the the users ie beyond the first index of helpContent*/}
-                {currentInfoIndex > 0 ? <PreviousButton currentIndex={currentInfoIndex} setIndex={setCurrentInfoIndex}/> : ""}
+            <div className='help-elements'>
+                <h2>Help</h2>
+                
+                <p>{helpContent[currentInfoIndex]}</p>
+                <div className='nav-buttons' id='help-nav-buttons'>
+                    {/* Only displays the next button if the next index in the helpContent array exists */}
+                    {currentInfoIndex === helpContent.length-1 ? "" : <NextButton currentIndex={currentInfoIndex} setIndex={setCurrentInfoIndex} arrayLength={helpContent.length}/>}
+                    {/* Only displays the back button if the the users ie beyond the first index of helpContent*/}
+                    {currentInfoIndex > 0 ? <PreviousButton currentIndex={currentInfoIndex} setIndex={setCurrentInfoIndex}/> : ""}
+                </div>
             </div>
         </div>
     )
