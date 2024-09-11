@@ -77,19 +77,21 @@ function QuizScreen (props) {
         <div className='screen-container quizscreen-container'>
             <button className='home-button' onClick={props.onHome}>{/*}<FontAwesomeIcon icon={faHouse} /> */}</button>
 
-            {/* Sets the question number based of the current index */}
-            <h2>Question {questionIndex + 1}</h2>
-            
-            {/* Displays the question stored in the question object */}
-            <p>{currentQuestion.question}</p>
-            <div className='answer-container'>
+            <div className='quiz-elements'>
+                {/* Sets the question number based of the current index */}
+                <h2>Question {questionIndex + 1}</h2>
+                
+                {/* Displays the question stored in the question object */}
+                <p>{currentQuestion.question}</p>
+                <div className='answer-container'>
 
-                {/* Creates a button for each answer within the question's answer array */}
-                {shuffledAnswers.map((answer, index) => (
-                    <button className='answer-button' key={index} disabled={buttonDisabled} onClick={(event) => handleAnswerClick(event, answer.isCorrect)}>
-                        {answer.text}
-                    </button>
-                ))}
+                    {/* Creates a button for each answer within the question's answer array */}
+                    {shuffledAnswers.map((answer, index) => (
+                        <button className='answer-button' key={index} disabled={buttonDisabled} onClick={(event) => handleAnswerClick(event, answer.isCorrect)}>
+                            {answer.text}
+                        </button>
+                    ))}
+                </div>
             </div>
             <div className='nav-buttons'>
                 {/* Only renders the NextButton component if the showNextButton true & it is not the final question. Prevents the user from moving to the next question without selecting an answer first */}
