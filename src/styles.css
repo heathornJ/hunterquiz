@@ -220,6 +220,19 @@ button:disabled:hover {
     flex-direction: column;
 }
 
+.result-paragraphs {
+    max-width: 100%;
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+.result-paragraph-background {
+    max-width: 100%;
+    padding: 0 0.7em;
+    border-radius: 1em;
+    background-color: #ffffffaa;
+}
+
 .result-elements {
     display: flex;
     justify-content:space-between;
