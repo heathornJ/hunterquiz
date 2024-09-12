@@ -13,12 +13,21 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
-    height: 100vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
 #root {
     height: 100%;
+}
+
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -71,7 +80,8 @@ button:disabled:hover {
 /* Outer div for each Screen component */
 .screen-container {
     /* border: solid; */
-    height: 100%;
+    padding: 2em 0;
+    height: fit-content;
 }
 
 
@@ -184,6 +194,11 @@ button:disabled:hover {
 /* Reserves space for next-button to avoid content shifting*/
 .quizscreen-container .nav-buttons {
     height: 3em;
+}
+
+.quizscreen-container .nav-buttons button {
+    height: 3em;
+    margin: 0;
 }
 
 /* ResultScreen */
