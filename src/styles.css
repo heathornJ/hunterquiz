@@ -296,12 +296,16 @@ button {
 /* QuizScreen */
 
 .quizscreen-container{
-    width: 80%;
+    width: 90%;
 }
 
 .answer-container {
     width: 100%;
     max-width: 50em;
+}
+
+.answer-container button {
+    margin: 0.5em;
 }
 
 /* Reserves space for next-button to avoid content shifting*/
