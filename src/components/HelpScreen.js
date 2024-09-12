@@ -24,8 +24,9 @@ function HelpScreen (props) {
             <button className='home-button' onClick={props.onHome}>{/*}<FontAwesomeIcon icon={faHouse} /> */} </button>
             <div className='help-elements'>
                 <h2>Help</h2>
-                
-                <p>{helpContent[currentInfoIndex]}</p>
+                <div className='help-content-background'>
+                    <p>{helpContent[currentInfoIndex]}</p>
+                </div>
                 <div className='nav-buttons' id='help-nav-buttons'>
                     {/* Only displays the next button if the next index in the helpContent array exists */}
                     {currentInfoIndex === helpContent.length-1 ? "" : <NextButton currentIndex={currentInfoIndex} setIndex={setCurrentInfoIndex} arrayLength={helpContent.length}/>}

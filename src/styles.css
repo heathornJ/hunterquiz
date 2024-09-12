@@ -147,6 +147,13 @@ button:disabled:hover {
     max-height: 30em;
 }
 
+.help-content-background {
+    max-width: 100%;
+    padding: 0 0.7em;
+    border-radius: 1em;
+    background-color: #ffffffaa;
+}
+
 #help-nav-buttons{
     flex-direction: row-reverse;
     justify-content: center;
@@ -243,4 +250,60 @@ button:disabled:hover {
 }
 
 /* Larger Device Styles */
-@media (min-width: 769px) { }
+@media (min-width: 769px) { 
+
+/* General Styles */
+
+#root {
+    width: 100%;
+}
+
+.App{
+    width: 100%;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5em;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4.5em;
+    text-align: center;
+    margin: 0 0 0.5em 0;
+}
+
+p {
+    font-size: 2em;
+    text-align: center;
+}
+
+button {
+    font-size: 1.5em;
+}
+
+/* HomeScreen */
+
+/* HelpScreen */
+
+/* QuizScreen */
+
+.quizscreen-container{
+    width: 60%;
+}
+
+.answer-container {
+    width: 80%;
+    max-width: 50em;
+}
+
+/* Reserves space for next-button to avoid content shifting*/
+.quizscreen-container .nav-buttons {
+    min-height: 5em;
+    height: fit-content;
+}
+
+}
