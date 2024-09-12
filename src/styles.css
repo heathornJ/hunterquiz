@@ -278,11 +278,15 @@ h2 {
 
 p {
     font-size: 2em;
-    text-align: center;
+    text-align: left;
 }
 
 button {
     font-size: 1.5em;
+}
+
+.screen-container {
+    padding: 5em 0;
 }
 
 /* HomeScreen */
@@ -292,11 +296,11 @@ button {
 /* QuizScreen */
 
 .quizscreen-container{
-    width: 60%;
+    width: 80%;
 }
 
 .answer-container {
-    width: 80%;
+    width: 100%;
     max-width: 50em;
 }
 
