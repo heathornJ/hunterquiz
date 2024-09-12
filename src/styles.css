@@ -41,7 +41,7 @@ h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.5em;
     text-align: center;
-    margin: 0;
+    margin: 0 0 0.5em 0;
 }
 
 p {
@@ -80,7 +80,7 @@ button:disabled:hover {
 /* Outer div for each Screen component */
 .screen-container {
     /* border: solid; */
-    padding: 2em 0;
+    padding: 3.5em 0;
     height: fit-content;
 }
 
@@ -171,15 +171,25 @@ button:disabled:hover {
     width: 100%;
 }
 
+.current-question-background {
+    max-width: 80%;
+    padding: 0 0.7em;
+    border-radius: 1em;
+    background-color: #ffffffaa;
+}
+
 .current-question {
-    max-width: 60%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0.5em 0;
 }
 
 .answer-container {
     display: flex;
-    margin: 0 auto;
+    margin: 4em auto 0;
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 40em;
 }
 
 .answer-container button {
