@@ -32,7 +32,7 @@ function ResultScreen (props) {
                         </div>
                     </div>
                 </div>
-                <div className='nav-buttons'>
+                <div className='nav-buttons' id='result-nav-buttons'>
                     <StartButton text="Try Again" onStart={props.onStart}/>
                     <button onClick={props.onHome}>Home</button>
                 </div>

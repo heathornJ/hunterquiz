@@ -22,7 +22,8 @@
 
 /* Mobile/Small Devices - General Styles */
 :root {
-    --text-container-color: #ffffffaa
+    --text-container-color: #556B2FAA ;
+
 }
 
 * {
@@ -72,7 +73,6 @@ h2 {
 p {
     font-family: "kalamregular", 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5em;
-    text-align: center;
     text-align: left;
 }
 
@@ -180,6 +180,7 @@ button:disabled:hover {
     padding: 0 0.7em;
     border-radius: 1em;
     background-color: var(--text-container-color);
+    box-shadow: 9px 6px 10px #000000aa;
 }
 
 .help-elements h2 {
@@ -216,6 +217,7 @@ button:disabled:hover {
     padding: 0 0.7em;
     border-radius: 1em;
     background-color: var(--text-container-color);
+    box-shadow: 9px 6px 10px #000000aa;
 }
 
 .current-question {
@@ -273,6 +275,7 @@ button:disabled:hover {
     padding: 0 0.7em;
     border-radius: 1em;
     background-color: var(--text-container-color);
+    box-shadow: 9px 6px 10px #000000aa;
 }
 
 .result-elements {
@@ -282,6 +285,14 @@ button:disabled:hover {
     flex-direction: column;
     height: 60%;
     max-height: 30em;
+}
+
+.result-elements h2 {
+    margin-bottom: 1em;
+}
+
+#result-nav-buttons{
+    margin-top: 3em;
 }
 
 /* Larger Device Styles */
