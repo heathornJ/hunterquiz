@@ -5,7 +5,7 @@ function HomeScreen (props) {
     return (
         <div className='screen-container homescreen-container'>
             <div className='home-elements'>
-                <h1>Hunter Quiz</h1>
+                <h1>HUNTER QUIZ</h1>
                 <div className='nav-buttons'>
                     <StartButton text="Start" onStart={props.onStart}/>
                     <button onClick={props.onHelp}>Help</button>

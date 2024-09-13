@@ -23,7 +23,7 @@ function HelpScreen (props) {
         <div className='screen-container helpscreen-container'>
             <button className='home-button' onClick={props.onHome}>{/*}<FontAwesomeIcon icon={faHouse} /> */} </button>
             <div className='help-elements'>
-                <h2>Help</h2>
+                <h2>HELP</h2>
                 <div className='help-content-background'>
                     <p>{helpContent[currentInfoIndex]}</p>
                 </div>

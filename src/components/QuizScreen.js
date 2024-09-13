@@ -79,7 +79,7 @@ function QuizScreen (props) {
 
             <div className='quiz-elements'>
                 {/* Sets the question number based of the current index */}
-                <h2>Question {questionIndex + 1}</h2>
+                <h2>QUESTION {questionIndex + 1}</h2>
                 
                 {/* Displays the question stored in the question object */}
                 <div className='current-question-background'>

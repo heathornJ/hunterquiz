@@ -1,3 +1,16 @@
+/* FONTS */
+
+@font-face {
+    font-family: 'protest_revolutionregular';
+    src: url('./fonts/protestrevolution-regular-webfont.woff2') format('woff2'),
+         url('./fonts/protestrevolution-regular-webfont.woff') format('woff'),
+         url("./fonts/ProtestRevolution-Regular.ttf")
+      format("truetype");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /* Mobile/Small Devices - General Styles */
 
 * {
@@ -31,20 +44,21 @@ body {
 }
 
 h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "protest_revolutionregular", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 3em;
     text-align: center;
     margin-top: 0;
 }
 
 h2 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "protest_revolutionregular", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.5em;
     text-align: center;
     margin: 0 0 0.5em 0;
 }
 
 p {
+    font-family: 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5em;
     text-align: center;
     text-align: left;
@@ -61,6 +75,7 @@ button {
     background-image: url('./images/button-background.png');
     background-size: 100% 100%;
     color: #ffffff;
+    font-family: "protest_revolutionregular", Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
 }
 
@@ -201,6 +216,7 @@ button:disabled:hover {
 }
 
 .answer-container button {
+    font-family: monospace, 'Courier New', Courier;
     min-height: 5em;
     min-width: 12em;
     max-height: 10em;
@@ -264,17 +280,11 @@ button:disabled:hover {
 }
 
 h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 5em;
-    text-align: center;
-    margin-top: 0;
 }
 
 h2 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 4.5em;
-    text-align: center;
-    margin: 0 0 0.5em 0;
 }
 
 p {
