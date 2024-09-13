@@ -13,7 +13,7 @@ function HelpScreen (props) {
 
     // Array containing different pieces of help text.
     const helpContent = [
-        "I am index 0 of help content",
+        "I am index 0 of help content aaaaaaaa aaaaaaaaa aaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaaaaa a ",
         "I am index 1 of help content",
         "I am index 2 of help content",
         "I am index 3 of help content"

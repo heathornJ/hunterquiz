@@ -32,6 +32,7 @@
 }
 
 body {
+    /*TODO: FIX BODY NOT EXPANDING to match height. - Potentially swap margin usage for padding */
     margin: 0;
     background-color: lightgray; /*Temporary*/
     background-image: url('./images/general-background.webp');
@@ -77,7 +78,8 @@ p {
 }
 
 .App {
-    height: 100%;
+    min-height: 100%;
+    height: fit-content;
     /* border: 3px blue dashed; */
 }
 
@@ -176,7 +178,7 @@ button:disabled:hover {
 }
 
 .help-content-background {
-    max-width: 100%;
+    max-width: 90%;
     padding: 0 0.7em;
     border-radius: 1em;
     background-color: var(--text-container-color);
@@ -339,6 +341,10 @@ button {
 /* HomeScreen */
 
 /* HelpScreen */
+
+.help-content-background {
+    max-width: 60%;
+}
 
 /* QuizScreen */
 

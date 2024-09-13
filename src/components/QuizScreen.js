@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faHouse} from '@fortawesome/free-solid-svg-icons'
 */
 
+/* TODO - REMOVE CORRECT-ANSWER & INCORRECT-ANSWER ONCE NEXT BUTTON IS SELECTED */
+
 function QuizScreen (props) {
     //State for the question array index
     const [questionIndex, setQuestionIndex] = useState(0);
@@ -66,6 +68,7 @@ function QuizScreen (props) {
                 setShuffledAnswers(currentQuestion.answers);
             }
         }
+
     }, [questionIndex, shuffledQuestions]);
 
     //Protects against shuffledQuestions to being ready until after first render
@@ -89,7 +92,11 @@ function QuizScreen (props) {
 
                     {/* Creates a button for each answer within the question's answer array */}
                     {shuffledAnswers.map((answer, index) => (
-                        <button className='answer-button' key={index} disabled={buttonDisabled} onClick={(event) => handleAnswerClick(event, answer.isCorrect)}>
+                        <button 
+                            className='answer-button' 
+                            key={index} 
+                            disabled={buttonDisabled} 
+                            onClick={(event) => handleAnswerClick(event, answer.isCorrect)}>
                             {answer.text}
                         </button>
                     ))}
