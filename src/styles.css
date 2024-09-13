@@ -8,6 +8,15 @@
       format("truetype");
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'kalamregular';
+    src: url('./fonts/kalam-regular-webfont.woff2') format('woff2'),
+         url('./fonts/kalam-regular-webfont.woff') format('woff'),
+         url('./fonts/Kalam-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 
 }
 
@@ -58,7 +67,7 @@ h2 {
 }
 
 p {
-    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-family: "kalamregular", 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5em;
     text-align: center;
     text-align: left;
@@ -216,7 +225,8 @@ button:disabled:hover {
 }
 
 .answer-container button {
-    font-family: monospace, 'Courier New', Courier;
+    font-family: "kalamregular", 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
     min-height: 5em;
     min-width: 12em;
     max-height: 10em;
