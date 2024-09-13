@@ -295,6 +295,14 @@ button:disabled:hover {
     margin-top: 3em;
 }
 
+#correct-answer {
+    color: lime;
+}
+
+#incorrect-answer {
+    color: red;
+}
+
 /* Larger Device Styles */
 @media (min-width: 769px) { 
 

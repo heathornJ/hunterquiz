@@ -2,154 +2,154 @@
 const questions = [
     {
         id: 0,
-        question: "This is the first question",
+        question: "What is the primary element of the Elder Dragon Teostra?",
         answers: [
-            {text:"correctAnswer", isCorrect: true},
-            {text:"b", isCorrect: false},
-            {text:"c", isCorrect: false},
-            {text:"d", isCorrect: false}
+            {text:"Fire", isCorrect: true},
+            {text:"Water", isCorrect: false},
+            {text:"Ice", isCorrect: false},
+            {text:"Thunder", isCorrect: false}
         ],
         type: "multiple-choice"
     },
     {
         id: 1,
-        question: "This is the second question",
+        question: "Rathian is known as the 'Queen of the Skies'.",
         answers: [
-            {text:"true", isCorrect: true},
-            {text:"false", isCorrect: false},
+            {text:"True", isCorrect: false},
+            {text:"False", isCorrect: true},
         ],
         type: "true-false"
     },
     {
         id: 2,
-        question: "This is the third question",
+        question: "Which monster is known for being able to change between Fire and Ice elemental modes?",
         answers: [
-            {text:"correctAnswer", isCorrect: true},
-            {text:"b", isCorrect: false},
-            {text:"c", isCorrect: false},
-            {text:"d", isCorrect: false}
+            {text:"Alatreon", isCorrect: true},
+            {text:"Kushala Daora", isCorrect: false},
+            {text:"Velkhana", isCorrect: false},
+            {text:"Kushala Daora", isCorrect: false}
         ],
         type: "multiple-choice"
     },
     {
         id: 3,
-        question: "This is the fourth question",
+        question: "Which of the following monsters is classified as an amphibian?",
         answers: [
-            {text:"correctAnswer", isCorrect: true},
-            {text:"b", isCorrect: false},
-            {text:"c", isCorrect: false},
-            {text:"d", isCorrect: false}
+            {text:"Tetsucabra", isCorrect: true},
+            {text:"Khezu", isCorrect: false},
+            {text:"Royal Ludroth", isCorrect: false},
+            {text:"Nargacuga", isCorrect: false}
         ],
         type: "multiple-choice"
     },
     {
         id: 4,
-        question: "This is an example of a really long question in the place of the fifth question to see how it aligns",
+        question: "What is the signature ability of the monster Nergigante?",
         answers: [
-            {text:"correctAnswer", isCorrect: true},
-            {text:"b", isCorrect: false},
-            {text:"c", isCorrect: false},
-            {text:"d", isCorrect: false}
+            {text:"Regenerating Body Spikes", isCorrect: true},
+            {text:"Fireball Attacks", isCorrect: false},
+            {text:"Electrical Discharge", isCorrect: false},
+            {text:"Poisonous Spikes", isCorrect: false}
         ],
         type: "multiple-choice"
     },
     {
         id: 5,
-        question: "This is the sixth question",
+        question: "A Rathalos primarily resides in volcanic regions.",
         answers: [
-            {text:"true", isCorrect: true},
-            {text:"false", isCorrect: false},
+            {text:"True", isCorrect: false},
+            {text:"False", isCorrect: true},
         ],
         type: "true-false"
     },
     {
         id: 6,
-        question: "This is the seventh question",
+        question: "Lunastra is a female counterpart to the Elder Dragon Teostra.",
         answers: [
-            {text:"true", isCorrect: true},
-            {text:"false", isCorrect: false},
+            {text:"True", isCorrect: true},
+            {text:"False", isCorrect: false},
         ],
         type: "true-false"
     },
     {
         id: 7,
-        question: "This is the eigth question",
+        question: "Astalos is known for its powerful ice-based attacks.",
         answers: [
-            {text:"true", isCorrect: true},
-            {text:"false", isCorrect: false},
+            {text:"True", isCorrect: false},
+            {text:"False", isCorrect: true},
         ],
         type: "true-false"
     },
     {
         id: 8,
-        question: "This is the ninth question",
+        question: "In Monster Hunter Rise, which new mechanic allows hunters to ride and control monsters temporarily?",
         answers: [
-            {text:"correctAnswer", isCorrect: true},
-            {text:"b", isCorrect: false},
-            {text:"c", isCorrect: false},
-            {text:"d", isCorrect: false}
+            {text:"Wyvern Riding", isCorrect: true},
+            {text:"Wirebug", isCorrect: false},
+            {text:"Dragon Piercer", isCorrect: false},
+            {text:"Clutch Claw", isCorrect: false}
         ],
         type: "multiple-choice"
     },
     {
         id: 9,
-        question: "This is the tenth question",
+        question: "In Monster Hunter: World, which monster is known to inhabit the Coral Highlands?",
         answers: [
-            {text:"correctAnswer", isCorrect: true},
-            {text:"b", isCorrect: false},
-            {text:"c", isCorrect: false},
-            {text:"d", isCorrect: false}
+            {text:"Paolumu", isCorrect: true},
+            {text:"Radobaan", isCorrect: false},
+            {text:"Vaal Hazak", isCorrect: false},
+            {text:"Jyuratodus", isCorrect: false}
         ],
         type: "multiple-choice"
     },
     {
         id: 10,
-        question: "This is the eleventh question",
+        question: "Which monster is known as the 'Brutal Elder Dragon'?",
         answers: [
-            {text:"correctAnswer", isCorrect: true},
-            {text:"b", isCorrect: false},
-            {text:"c", isCorrect: false},
-            {text:"d", isCorrect: false}
+            {text:"Fatalis", isCorrect: true},
+            {text:"Nergigante", isCorrect: false},
+            {text:"Deviljho", isCorrect: false},
+            {text:"Rajang", isCorrect: false}
         ],
         type: "multiple-choice"
     },
     {
         id: 11,
-        question: "This is the twelvth question",
+        question: "Which of the following monsters is considered a Fanged Wyvern?",
         answers: [
-            {text:"correctAnswer", isCorrect: true},
-            {text:"b", isCorrect: false},
-            {text:"c", isCorrect: false},
-            {text:"d", isCorrect: false}
+            {text:"Zinogre", isCorrect: true},
+            {text:"Rathalos", isCorrect: false},
+            {text:"Barioth", isCorrect: false},
+            {text:"Brachydios", isCorrect: false}
         ],
         type: "multiple-choice"
     },
     {
         id: 12,
-        question: "This is the thirteenth question",
+        question: "The Glavenus monster uses its bladed tail to deliver explosive slashes.",
         answers: [
-            {text:"true", isCorrect: true},
-            {text:"false", isCorrect: false},
+            {text:"True", isCorrect: true},
+            {text:"False", isCorrect: false},
         ],
         type: "true-false"
     },
     {
         id: 13,
-        question: "This is the fourteenth question",
+        question: "Rajang is weak to Thunder element.",
         answers: [
-            {text:"true", isCorrect: true},
-            {text:"false", isCorrect: false},
+            {text:"True", isCorrect: true},
+            {text:"False", isCorrect: false},
         ],
         type: "true-false"
     },
     {
         id: 14,
-        question: "This is the fifteenth question",
+        question: "Which item increases the number of times you can carve from a monster?",
         answers: [
-            {text:"correctAnswer", isCorrect: true},
-            {text:"b", isCorrect: false},
-            {text:"c", isCorrect: false},
-            {text:"d", isCorrect: false}
+            {text:"Fate Jewel", isCorrect: true},
+            {text:"Lucky Charm", isCorrect: false},
+            {text:"Mega Potion", isCorrect: false},
+            {text:"Carving Knife", isCorrect: false}
         ],
         type: "multiple-choice"
     },
