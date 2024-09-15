@@ -20,7 +20,10 @@ function QuizScreen (props) {
     const [shuffledQuestions, setShuffledQuestions] = useState([]);
     // State for shuffled answers
     const [shuffledAnswers, setShuffledAnswers] = useState([]);
-    
+    // State for identifying selected answer button
+    const [selectedAnswer, setSelectedAnswer] = useState(null);
+
+
     //Gets the currentQuestion from the shuffledQuestions array.
     const currentQuestion = shuffledQuestions[questionIndex];
 
@@ -36,6 +39,8 @@ function QuizScreen (props) {
     const handleAnswerClick = (event, isCorrect) => {
         //Gets the button that was clicked.
         const targetButton = event.target;
+        //Sets the state to the selected button.
+        setSelectedAnswer(targetButton)
         setShowNextButton(true);
         setButtonDisabled(true);
             
@@ -66,6 +71,12 @@ function QuizScreen (props) {
                 setShuffledAnswers(shuffle(currentQuestion.answers));
             } else {
                 setShuffledAnswers(currentQuestion.answers);
+            }
+
+            //Resets the button's id to hide effects of correct/incorrect answer css and resets state back to null for the next usage.
+            if (selectedAnswer) {
+                selectedAnswer.id = ""
+                setSelectedAnswer(null);
             }
         }
 
