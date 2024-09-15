@@ -32,7 +32,6 @@
 }
 
 body {
-    /*TODO: FIX BODY NOT EXPANDING to match height. - Potentially swap margin usage for padding */
     margin: 0;
     background-color: lightgray; /*Temporary*/
     background-image: url('./images/general-background.webp');
@@ -174,7 +173,7 @@ button:disabled:hover {
     align-items: center;
     flex-direction: column;
     height: 60%;
-    max-height: 30em;
+    
 }
 
 .help-content-background {
@@ -286,7 +285,6 @@ button:disabled:hover {
     align-items: center;
     flex-direction: column;
     height: 60%;
-    max-height: 30em;
 }
 
 .result-elements h2 {

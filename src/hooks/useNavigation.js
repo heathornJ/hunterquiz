@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 /* Set initialScreen to home when testing is finished */
-function useNavigation(initialScreen = 'home') {
+function useNavigation(initialScreen = 'result') {
     /* Sets what screen component is currently displayed */
     const [screen, setScreen] = useState(initialScreen);
 
