@@ -99,7 +99,7 @@ To confirm the webapp was functional, responsive, and had the correct styling:
   - From the source section drop-down menu, select the Main Branch, then click "Save".
   - The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-- The live link can be found [here](pagesLink)
+- The live link can be found [here](pagesLink).
 
 ## Contact
 
@@ -115,4 +115,4 @@ Jamie Heathorn
 
 - Images and iconography creating using [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html) and [Bing Image Creator](https://www.bing.com/images/create).
 
-- Information & answers regarding the Monster Hunter series were sourced from (Monster Hunter Wiki)[https://monsterhunter.fandom.com/wiki/Monster_Hunter_Wiki].
+- Information & answers regarding the Monster Hunter series were sourced from [Monster Hunter Wiki](https://monsterhunter.fandom.com/wiki/Monster_Hunter_Wiki).
