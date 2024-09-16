@@ -54,18 +54,36 @@ To confirm the webapp was functional, responsive, and had the correct styling:
 
   - Chrome:
 
+    - ![A screenshot of the help screen responsiveness being tested for desktop views](./src/images/screenshots/1920x-chrome-help-test.png)
+    - ![A screenshot of the quiz screen responsiveness being tested for desktop views](./src/images/screenshots/1920x-chrome-quiz-test.png)
+    - ![A screenshot of the result screen responsiveness being tested for desktop views](./src/images/screenshots/1920x-chrome-result-test.png)
+    - ![A screenshot of the help screen responsiveness being tested for mobile views](./src/images/screenshots/iphone12-chrome-help-test.png)
+    - ![A screenshot of the quiz screen responsiveness being tested for mobile views](./src/images/screenshots/iphone12-chrome-quiz-test.png)
+    - ![A screenshot of the result screen responsiveness being tested for mobile views](./src/images/screenshots/iphone12-chrome-result-test.png)
+    - ![A screenshot of the result screen responsiveness being tested for mobile views](./src/images/screenshots/iphone12-chrome-result-fix-test.png)
+
   - Edge:
+
+    - ![A screenshot of the quiz screen responsiveness being tested for desktop views](./src/images/screenshots/monitor-edge-quiz-test.png)
+    - ![A screenshot of the quiz screen responsiveness being tested for mobile views](./src/images/screenshots/mobile-edge-quiz-test.png)
 
 - The webapp's loading times were tested using React Profiler:
 
-- HTML files tested against W3C.
-- CSS files tested against Jigsaw.
+  - ![A screenshot of the webapp being tested using React Profiler](./src/images/screenshots/profiler-01.png)
+  - ![A screenshot of the webapp being tested using React Profiler](./src/images/screenshots/profiler-02.png)
+
+- CSS files tested against Jigsaw:
+
   - There were no errors.
   - ![A screenshot of the CSS validity checks with w3c, showing a passed test](./src/images/screenshots/css-test.png)
-- JS files tested against JShint, where possible.
+
+- JS files tested against JShint, where possible:
+
   - No errors were found, just warnings regarding ES versions.
   - ![A screenshot of the JS validity checks with JShint, showing only warnings regarding ES versions.](./src/images/screenshots/jshint-test.png)
-- JSX and formatting have be tested against ESlint recommended config.
+
+- JSX and formatting have be tested against ESlint recommended config:
+
   - Errors regarding prop validation were the main highlight outside of formatting files using prettier.
   - ![A screenshot of the first ESlint test showing warnings regarding prop validation](./src/images/screenshots/eslint-test.png)
   - These were fixed by importing and using PropTypes to validate the type of props passed to components.
