@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/hunterquiz/static/css/main.c4043e8f.css",
+    "main.js": "/hunterquiz/static/js/main.c1220f48.js",
+    "static/js/453.43f72c4e.chunk.js": "/hunterquiz/static/js/453.43f72c4e.chunk.js",
+    "static/media/ProtestRevolution-Regular.ttf": "/hunterquiz/static/media/ProtestRevolution-Regular.a1e49247209c98149261.ttf",
+    "static/media/Kalam-Regular.ttf": "/hunterquiz/static/media/Kalam-Regular.831aaad03890ba2d7417.ttf",
+    "static/media/protestrevolution-regular-webfont.woff": "/hunterquiz/static/media/protestrevolution-regular-webfont.99c9b423a8f7f4817117.woff",
+    "static/media/protestrevolution-regular-webfont.woff2": "/hunterquiz/static/media/protestrevolution-regular-webfont.d79eb8972af4e13df1fe.woff2",
+    "static/media/general-background.webp": "/hunterquiz/static/media/general-background.73d02b5a0ffe5164c328.webp",
+    "static/media/home-button-background.png": "/hunterquiz/static/media/home-button-background.48c5a7b7b6831ba7c949.png",
+    "static/media/kalam-regular-webfont.woff": "/hunterquiz/static/media/kalam-regular-webfont.8a962e3416964d61717a.woff",
+    "static/media/kalam-regular-webfont.woff2": "/hunterquiz/static/media/kalam-regular-webfont.c49b5598294fbecab9d0.woff2",
+    "index.html": "/hunterquiz/index.html",
+    "main.c4043e8f.css.map": "/hunterquiz/static/css/main.c4043e8f.css.map",
+    "main.c1220f48.js.map": "/hunterquiz/static/js/main.c1220f48.js.map",
+    "453.43f72c4e.chunk.js.map": "/hunterquiz/static/js/453.43f72c4e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c4043e8f.css",
+    "static/js/main.c1220f48.js"
+  ]
+}
