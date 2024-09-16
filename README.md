@@ -60,8 +60,16 @@ To confirm the webapp was functional, responsive, and had the correct styling:
 
 - HTML files tested against W3C.
 - CSS files tested against Jigsaw.
-- JS files tested against JSValidator.
-- JSX elements have also be tested against ESlint recommended config.
+  - There were no errors.
+  - ![A screenshot of the CSS validity checks with w3c, showing a passed test](./src/images/screenshots/css-test.png)
+- JS files tested against JShint, where possible.
+  - No errors were found, just warnings regarding ES versions.
+  - ![A screenshot of the JS validity checks with JShint, showing only warnings regarding ES versions.](./src/images/screenshots/jshint-test.png)
+- JSX and formatting have be tested against ESlint recommended config.
+  - Errors regarding prop validation were the main highlight outside of formatting files using prettier.
+  - ![A screenshot of the first ESlint test showing warnings regarding prop validation](./src/images/screenshots/eslint-test.png)
+  - These were fixed by importing and using PropTypes to validate the type of props passed to components.
+  - ![A screenshot of the second ESlint test showing no errors](./src/images/screenshots/eslint-result.png)
 
 ## Deployment
 
@@ -84,12 +92,9 @@ Jamie Heathorn
 
 - Inspiration:
 
-  - source
-  - source
-  - source
+  - [starquiz](https://allwrightben.github.io/starquiz/)
+  - [Monster Hunter Tri Menu](https://www.nintendo.com/eu/media/images/08_content_images/support_6/nintendo_3ds_20/3ds_monsterhunter3ultimatedatatransfer/3DS_MonsterHunter3Ultimate_DTP_enGB_02_image950w.png)
 
 - Images and iconography creating using [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html) and [Bing Image Creator](https://www.bing.com/images/create).
 
 - Information & answers regarding the Monster Hunter series were sourced from (Monster Hunter Wiki)[https://monsterhunter.fandom.com/wiki/Monster_Hunter_Wiki].
-
--

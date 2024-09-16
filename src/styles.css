@@ -1,29 +1,28 @@
 /* FONTS */
 
 @font-face {
-    font-family: 'protest_revolutionregular';
-    src: url('./fonts/protestrevolution-regular-webfont.woff2') format('woff2'),
-         url('./fonts/protestrevolution-regular-webfont.woff') format('woff'),
-         url("./fonts/ProtestRevolution-Regular.ttf")
-      format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "protest_revolutionregular";
+  src:
+    url("./fonts/protestrevolution-regular-webfont.woff2") format("woff2"),
+    url("./fonts/protestrevolution-regular-webfont.woff") format("woff"),
+    url("./fonts/ProtestRevolution-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'kalamregular';
-    src: url('./fonts/kalam-regular-webfont.woff2') format('woff2'),
-         url('./fonts/kalam-regular-webfont.woff') format('woff'),
-         url('./fonts/Kalam-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "kalamregular";
+  src:
+    url("./fonts/kalam-regular-webfont.woff2") format("woff2"),
+    url("./fonts/kalam-regular-webfont.woff") format("woff"),
+    url("./fonts/Kalam-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Mobile/Small Devices - General Styles */
 :root {
-    --text-container-color: #556B2FAA ;
-
+  --text-container-color: #556b2faa;
 }
 
 * {
@@ -32,342 +31,336 @@
 }
 
 body {
-    margin: 0;
-    background-color: lightgray; /*Temporary*/
-    background-image: url('./images/general-background.webp');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+  margin: 0;
+  background-color: lightgray; /*Temporary*/
+  background-image: url("./images/general-background.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #root {
-    height: 100%;
-}
-
-.App{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-h1 {
-    font-family: "protest_revolutionregular", Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 3em;
-    text-align: center;
-    margin-top: 0;
-}
-
-h2 {
-    font-family: "protest_revolutionregular", Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2.5em;
-    text-align: center;
-    margin: 0 0 0.5em 0;
-}
-
-p {
-    font-family: "kalamregular", 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5em;
-    text-align: left;
+  height: 100%;
 }
 
 .App {
-    min-height: 100%;
-    height: fit-content;
-    /* border: 3px blue dashed; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "protest_revolutionregular", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 0;
+}
+
+h2 {
+  font-family: "protest_revolutionregular", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+  margin: 0 0 0.5em 0;
+}
+
+p {
+  font-family: "kalamregular", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.App {
+  min-height: 100%;
+  height: fit-content;
+  /* border: 3px blue dashed; */
 }
 
 /* General Buttons */
 
 button {
-    background-image: url('./images/button-background.png');
-    background-size: 100% 100%;
-    color: #ffffff;
-    font-family: "protest_revolutionregular", Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 700;
+  background-image: url("./images/button-background.png");
+  background-size: 100% 100%;
+  color: #ffffff;
+  font-family: "protest_revolutionregular", Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
 }
 
 button:hover {
-    color: rgb(255, 163, 97);
+  color: rgb(255, 163, 97);
 }
 
 /* Fades the button out slightly when disabled */
 button:disabled {
-    background-blend-mode: overlay;
+  background-blend-mode: overlay;
 }
 
 /* Hides the hover effect when button is disabled. Must match color set for button style above. */
 button:disabled:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 /* Outer div for each Screen component */
 .screen-container {
-    /* border: solid; */
-    padding: 3.5em 0;
-    height: fit-content;
+  /* border: solid; */
+  padding: 3.5em 0;
+  height: fit-content;
 }
-
 
 /* Nav-Buttons */
 
 .home-button {
-    position: absolute;
-    top: 0.6em;
-    left: 0.6em;
-    height: 3em;
-    width: 3em;
-    background-image: url(./images/home-button-background.png);
+  position: absolute;
+  top: 0.6em;
+  left: 0.6em;
+  height: 3em;
+  width: 3em;
+  background-image: url(./images/home-button-background.png);
 }
 
 .nav-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav-buttons button {
-    min-height: 3em;
-    min-width: 8em;
-    max-height: 5em;
-    max-width: 10em;
-    margin: 1em 1em 1em 1em;
+  min-height: 3em;
+  min-width: 8em;
+  max-height: 5em;
+  max-width: 10em;
+  margin: 1em 1em 1em 1em;
 }
 
 /* HomeScreen */
 .homescreen-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .home-elements {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-direction: column;
-    height: 60%;
-    max-height: 30em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 60%;
+  max-height: 30em;
 }
 
 .home-elements .nav-buttons {
-    padding-bottom: 4em;
+  padding-bottom: 4em;
 }
 
 /* HelpScreen */
 .helpscreen-container {
-    display: flex;
-    justify-content:center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .help-elements {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-direction: column;
-    height: 60%;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 60%;
 }
 
 .help-content-background {
-    max-width: 90%;
-    padding: 0 0.7em;
-    border-radius: 1em;
-    background-color: var(--text-container-color);
-    box-shadow: 9px 6px 10px #000000aa;
+  max-width: 90%;
+  padding: 0 0.7em;
+  border-radius: 1em;
+  background-color: var(--text-container-color);
+  box-shadow: 9px 6px 10px #000000aa;
 }
 
 .help-elements h2 {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
-#help-nav-buttons{
-    flex-direction: row-reverse;
-    justify-content: center;
-    margin-top: 3em;
+#help-nav-buttons {
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-top: 3em;
 }
 
 /* QuizScreen */
 
 .quizscreen-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .quiz-elements {
-    display: flex;
-    flex-direction: column;
-    justify-content:space-between;
-    align-items: center;
-    height: 60%;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 60%;
+  width: 100%;
 }
 
 .current-question-background {
-    max-width: 80%;
-    padding: 0 0.7em;
-    border-radius: 1em;
-    background-color: var(--text-container-color);
-    box-shadow: 9px 6px 10px #000000aa;
+  max-width: 80%;
+  padding: 0 0.7em;
+  border-radius: 1em;
+  background-color: var(--text-container-color);
+  box-shadow: 9px 6px 10px #000000aa;
 }
 
 .current-question {
-    max-width: 100%;
-    margin: 0;
-    padding: 0.5em 0;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.5em 0;
 }
 
 .answer-container {
-    display: flex;
-    margin: 1em auto 0;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 40em;
+  display: flex;
+  margin: 1em auto 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 40em;
 }
 
 .answer-container button {
-    font-family: "kalamregular", 'Arial Narrow', Arial, sans-serif;
-    font-weight: 400;
-    min-height: 5em;
-    min-width: 12em;
-    max-height: 10em;
-    max-width: 15em;
-    margin: 1em 1em 1em 1em;
+  font-family: "kalamregular", "Arial Narrow", Arial, sans-serif;
+  font-weight: 400;
+  min-height: 5em;
+  min-width: 12em;
+  max-height: 10em;
+  max-width: 15em;
+  margin: 1em 1em 1em 1em;
 }
-
 
 /* Reserves space for next-button to avoid content shifting*/
 .quizscreen-container .nav-buttons {
-    height: 3em;
+  height: 3em;
 }
 
 .quizscreen-container .nav-buttons button {
-    height: 3em;
-    margin: 0;
+  height: 3em;
+  margin: 0;
 }
 
 /* ResultScreen */
 
 .resultscreen-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .result-paragraphs {
-    max-width: 100%;
-    margin: 0;
-    padding: 0.5em 0;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.5em 0;
 }
 
 .result-paragraph-background {
-    max-width: 100%;
-    padding: 0 0.7em;
-    border-radius: 1em;
-    background-color: var(--text-container-color);
-    box-shadow: 9px 6px 10px #000000aa;
+  max-width: 100%;
+  padding: 0 0.7em;
+  border-radius: 1em;
+  background-color: var(--text-container-color);
+  box-shadow: 9px 6px 10px #000000aa;
 }
 
 .result-elements {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-direction: column;
-    height: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 60%;
 }
 
 .result-elements h2 {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
-#result-nav-buttons{
-    margin-top: 3em;
+#result-nav-buttons {
+  margin-top: 3em;
 }
 
 #correct-answer {
-    color: lime;
+  color: lime;
 }
 
 #incorrect-answer {
-    color: red;
+  color: red;
 }
 
 /* Larger Device Styles */
-@media (min-width: 769px) { 
+@media (min-width: 769px) {
+  /* General Styles */
 
-/* General Styles */
-
-#root {
+  #root {
     width: 100%;
-}
+  }
 
-.App{
+  .App {
     width: 100%;
-}
+  }
 
-h1 {
+  h1 {
     font-size: 5em;
-}
+  }
 
-h2 {
+  h2 {
     font-size: 4.5em;
-}
+  }
 
-p {
+  p {
     font-size: 2em;
-}
+  }
 
-button {
+  button {
     font-size: 1.5em;
-}
+  }
 
-.screen-container {
+  .screen-container {
     padding: 5em 0;
-}
+  }
 
-/* HomeScreen */
+  /* HomeScreen */
 
-/* HelpScreen */
+  /* HelpScreen */
 
-.help-content-background {
+  .help-content-background {
     max-width: 60%;
-}
+  }
 
-/* QuizScreen */
+  /* QuizScreen */
 
-.quizscreen-container{
+  .quizscreen-container {
     width: 90%;
-}
+  }
 
-.current-question-background {
+  .current-question-background {
     max-width: 60%;
-}
+  }
 
-.answer-container {
+  .answer-container {
     width: 100%;
     margin: 3em auto 0;
     max-width: 50em;
-}
+  }
 
-.answer-container button {
+  .answer-container button {
     margin: 0.5em;
-}
+  }
 
-/* Reserves space for next-button to avoid content shifting*/
-.quizscreen-container .nav-buttons {
+  /* Reserves space for next-button to avoid content shifting*/
+  .quizscreen-container .nav-buttons {
     min-height: 5em;
     height: fit-content;
-}
-
+  }
 }
