@@ -2,10 +2,6 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import NextButton from "./NextButton";
 import PreviousButton from "./PreviousButton";
-/*
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faHouse} from '@fortawesome/free-solid-svg-icons'
-*/
 
 function HelpScreen(props) {
   // Contains state for which set of help text to display.

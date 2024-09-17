@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-
 import questions from "../data/questions";
 import NextButton from "./NextButton";
-/* 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faHouse} from '@fortawesome/free-solid-svg-icons'
-*/
-
-/* TODO - REMOVE CORRECT-ANSWER & INCORRECT-ANSWER ONCE NEXT BUTTON IS SELECTED */
 
 function QuizScreen(props) {
   //State for the question array index
