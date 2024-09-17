@@ -95,6 +95,7 @@ button {
 
 button:hover {
   color: rgb(255, 163, 97);
+  cursor: pointer;
 }
 
 /* Fades the button out slightly when disabled */
