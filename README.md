@@ -72,12 +72,16 @@ To confirm the webapp was functional, responsive, and had the correct styling:
   - ![A screenshot of the webapp being tested using React Profiler](./src/images/screenshots/profiler-01.png)
   - ![A screenshot of the webapp being tested using React Profiler](./src/images/screenshots/profiler-02.png)
 
-- CSS files tested against Jigsaw:
+- HTML files were tested using [W3C Validator](https://validator.w3.org/)
+
+  - ![A screenshot of the W3C validator showing a passed test with only warnings regarding trailing slashes](./src/images/screenshots/html-test.png)
+
+- CSS files were tested using [Jigsaw](https://jigsaw.w3.org/css-validator/):
 
   - There were no errors.
   - ![A screenshot of the CSS validity checks with w3c, showing a passed test](./src/images/screenshots/css-test.png)
 
-- JS files tested against JShint, where possible:
+- JS files were tested using [JShint](https://jshint.com/), where possible:
 
   - No errors were found, just warnings regarding ES versions.
   - ![A screenshot of the JS validity checks with JShint, showing only warnings regarding ES versions.](./src/images/screenshots/jshint-test.png)
@@ -98,8 +102,15 @@ To confirm the webapp was functional, responsive, and had the correct styling:
   - In the GitHub repository, navigate to the Settings tab.
   - From the source section drop-down menu, select the Main Branch, then click "Save".
   - The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+  - Within project, installed "gh-pages" npm package as a development dependency.
+  - Add a "homepage" property with the homepage link in package.json.
+  - Add "predeploy" and "deploy" property to the "scripts" object with "npm run build" and "gh-pages -d build" respectively.
+  - Push the React app to the repository "npm run deploy -- -m 'commit message'"
+  - Configure GitHub Pages Source to "Branch -> gh-pages" and "Folder -> /(root)"
 
-- The live link can be found [here](pagesLink).
+- A detailed explanation of deploying the React App to GitHub Pages can be found [here](https://github.com/gitname/react-gh-pages).
+
+- The live link can be found [here](https://heathornj.github.io/hunterquiz/).
 
 ## Contact
 
