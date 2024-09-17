@@ -102,7 +102,7 @@ function QuizScreen(props) {
               disabled={buttonDisabled}
               onClick={(event) => handleAnswerClick(event, answer.isCorrect)}
             >
-              {answer.text}
+              <span className="answer-button-text">{answer.text}</span>
             </button>
           ))}
         </div>

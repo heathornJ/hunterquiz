@@ -80,7 +80,6 @@ p {
 .App {
   min-height: 100%;
   height: fit-content;
-  /* border: 3px blue dashed; */
 }
 
 /* General Buttons */
@@ -223,14 +222,19 @@ button:disabled:hover {
   max-width: 40em;
 }
 
-.answer-container button {
+.answer-button {
+  height: 5em;
+  width: 12em;
+  margin: 1em 1em 1em 1em;
+  padding: 1em;
+}
+
+.answer-button-text {
   font-family: "kalamregular", "Arial Narrow", Arial, sans-serif;
   font-weight: 400;
-  min-height: 5em;
-  min-width: 12em;
-  max-height: 10em;
-  max-width: 15em;
-  margin: 1em 1em 1em 1em;
+  font-size: 1em;
+  max-width: 70%;
+  word-wrap: normal;
 }
 
 /* Reserves space for next-button to avoid content shifting*/
@@ -345,8 +349,10 @@ button:disabled:hover {
     max-width: 50em;
   }
 
-  .answer-container button {
+  .answer-button {
     margin: 0.5em;
+    height: 5em;
+    width: 12em;
   }
 
   /* Reserves space for next-button to avoid content shifting*/
