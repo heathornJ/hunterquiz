@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to my front end software developer project for an "Online Quiz". This README file provides information about the content, creation, and learning process involved with creating this webapp.
+Welcome to my front end software developer project for an "Online Quiz". This README file provides information about the content, creation, and learning process involved with creating this webapp. The theme I chose for this project was based on a series of games named Monster Hunter.
 
 ## Introduction
 
