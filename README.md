@@ -32,6 +32,27 @@ Welcome to my front end software developer project for an "Online Quiz". This RE
 
 ### The web-app exists on one page with multiple components that are rendered individually as the user interacts with the navigation controls.
 
+- When the user visits the website, they will first see the home screen.
+  ![A screenshot of the home screen](./src/images/screenshots/homescreen.png)
+- On this screen there are 2 options: 'start' and 'help'.
+- Selecting help will display the help screen, where the user can learn how the quiz works and what to expect from it.
+  ![A screenshot of the help screen](./src/images/screenshots/helpscreen.png)
+- On this screen there is also a home button in the top-left corner, which will also be found on the quiz screen, to return back to the home screen.
+  ![A screenshot of the home button](./src/images/screenshots/home-button.png)
+- Once start is pressed, the quiz begins, and the user will see:
+  - The current question number.
+  - The question.
+  - Answer buttons.
+    ![A screenshot of the quiz screen](./src/images/screenshots/quizscreen.png)
+- Once an answer is selected, the answers will become disabled and will turn green if it was correct and red if it was incorrect.
+- A next button also appears for the user to load the next question when they are ready.
+  ![A screenshot of the answer changing colour and next button appearing after being selected](./src/images/screenshots/answer-select.png)
+- After the final question has been answered, the user is taken to ther results screen where they can:
+  - See the number of questions they answered correctly.
+  - See their rank based on correctly answered questions.
+  - Return to the home screen or try the quiz again.
+    ![A screenshot of the result screen and its text content and navigation buttons](./src/images/screenshots/resultscreen.png)
+
 ## Technologies Used
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) was used as the foundation of the webapp.
@@ -92,6 +113,10 @@ To confirm the webapp was functional, responsive, and had the correct styling:
   - ![A screenshot of the first ESlint test showing warnings regarding prop validation](./src/images/screenshots/eslint-test.png)
   - These were fixed by importing and using PropTypes to validate the type of props passed to components.
   - ![A screenshot of the second ESlint test showing no errors](./src/images/screenshots/eslint-result.png)
+
+- The webapp was tested for performance, accessibility, Best Practices, and SEO using [PageSpeed Inisghts](https://pagespeed.web.dev/).
+  - ![A screenshot of a PageSpeed mobile test showing 96, 100, 100, 100 for performance, accessibility, best practices, and seo](./src/images/screenshots/pagespeed-mobile.png)
+  - ![A screenshot of a PageSpeed desktop test showing 100, 100, 100, 100 for performance, accessibility, best practices, and seo](./src/images/screenshots/pagespeed-desktop.png)
 
 ## Deployment
 
