@@ -9,10 +9,13 @@ function HelpScreen(props) {
 
   // Array containing different pieces of help text.
   const helpContent = [
-    "I am index 0 of help content aaaaaaaa aaaaaaaaa aaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaaaaa a ",
-    "I am index 1 of help content",
-    "I am index 2 of help content",
-    "I am index 3 of help content",
+    "Welcome to the Hunter Quiz. To navigate through the help page and the quiz, select the 'next' button.",
+    "To go back to the home screen at any point, select the 'home' button in the top-left corner. To go back to the previous help tip, select the 'back' button.",
+    "To start the quiz, select the 'start' button on the home screen. This will give you your first question.",
+    "To select an answer, click on one of the answer buttons below. Pick carefully, you can't change your answer once you select it.",
+    "Once you select an answer, it will turn green if it's correct and red if it's incorrect. A 'next' button will appear which will take you to the next question.",
+    "Once you answer the final question, you'll see your total score and your hunter rank. Each question is worth 1 point.",
+    "When you're ready, select the home button and press 'start' to begin.",
   ];
 
   return (
