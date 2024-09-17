@@ -54,15 +54,18 @@ body {
   align-items: center;
 }
 
-h1 {
+h1,
+h2 {
   font-family: "protest_revolutionregular", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
   font-size: 3em;
   text-align: center;
   margin-top: 0;
 }
 
 h2 {
-  font-family: "protest_revolutionregular", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 2.5em;
   text-align: center;
   margin: 0 0 0.5em 0;
@@ -106,7 +109,10 @@ button:disabled:hover {
 
 /* Outer div for each Screen component */
 .screen-container {
-  /* border: solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 3.5em 0;
   height: fit-content;
 }
@@ -137,12 +143,6 @@ button:disabled:hover {
 }
 
 /* HomeScreen */
-.homescreen-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 
 .home-elements {
   display: flex;
@@ -158,11 +158,6 @@ button:disabled:hover {
 }
 
 /* HelpScreen */
-.helpscreen-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
 
 .help-elements {
   display: flex;
@@ -193,10 +188,6 @@ button:disabled:hover {
 /* QuizScreen */
 
 .quizscreen-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -252,13 +243,6 @@ button:disabled:hover {
 }
 
 /* ResultScreen */
-
-.resultscreen-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 
 .result-paragraphs {
   max-width: 100%;
