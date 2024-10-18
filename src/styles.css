@@ -247,6 +247,37 @@ button:disabled:hover {
   margin: 0;
 }
 
+/*Progress tracker for QuizScreen*/
+
+.progress-tracker-container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px black solid;
+}
+
+.progress-bar-border {
+  border: 3px red solid;
+  height: 2.5em;
+  width: 100%;
+  border-radius: 1em;
+}
+
+.progress-bar-background {
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  border-radius: 1em;
+}
+
+.progress-bar-foreground {
+  width: 0%;
+  height: 100%;
+  background-color: green;
+  border-radius: 1em;
+}
+
 /* ResultScreen */
 
 .result-paragraphs {

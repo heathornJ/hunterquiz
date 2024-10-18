@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import questions from "../data/questions";
 import NextButton from "./NextButton";
+import ProgressTracker from "./ProgressTracker";
 
 function QuizScreen(props) {
   //State for the question array index
@@ -124,6 +125,12 @@ function QuizScreen(props) {
           ) : (
             ""
           )}
+        </div>
+        <div className="progress-tracker-container">
+          <ProgressTracker
+            currentIndex={questionIndex}
+            arrayLength={questions.length}
+          />
         </div>
       </div>
     </div>
