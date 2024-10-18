@@ -1,19 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-/* Next button component. Accepts state variable, state setter, and array length to move onto the next index in an array. */
+/* Progress Tracker component. currentIndex of the question array and the total array length. */
 function ProgressTracker({ currentIndex, arrayLength }) {
+  /*Variables to calculate what percent of the quiz the user has completed*/
   const maxIndex = arrayLength - 1;
-  const percentageWidth = (100 * currentIndex) / arrayLength + "%";
+  const percentage = (100 * currentIndex) / maxIndex;
+  const percentageRounded = percentage.toFixed(0);
+  const percentageWidth = percentageRounded + "%";
 
+  /*Returns divs that reflect the progress the user has made through the quiz*/
   return (
     <>
-      <p>
-        The current index is {currentIndex} of {maxIndex}. Current percentage
-        width {percentageWidth}
-      </p>
-      <div className="progress-bar-border">
+      <div className="progress-bar-border" aria-label="quiz progress bar">
         <div className="progress-bar-background">
+          <p className="progress-text">Progress</p>
           <div
             className="progress-bar-foreground"
             style={{ width: percentageWidth }}
