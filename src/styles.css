@@ -303,6 +303,10 @@ button:disabled:hover {
   padding: 0.5em 0;
 }
 
+.result-paragraphs p {
+  text-align: center;
+}
+
 .result-paragraph-background {
   max-width: 90%;
   padding: 0 0.7em;

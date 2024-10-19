@@ -20,8 +20,7 @@ function HelpScreen(props) {
 
   return (
     <div className="screen-container helpscreen-container">
-      <button className="home-button" onClick={props.onHome}>
-      </button>
+      <button className="home-button" onClick={props.onHome}></button>
       <div className="help-elements">
         <h2>HELP</h2>
         <div className="help-content-background">

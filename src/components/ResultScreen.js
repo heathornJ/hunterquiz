@@ -33,7 +33,11 @@ function ResultScreen(props) {
               <p>
                 You answered {score} questions correctly out of {maxScore}!
               </p>
-              <p>This earns you the rank of: {rank}</p>
+              <p>
+                This earns you the rank of:
+                <br />
+                {rank}
+              </p>
             </div>
           </div>
         </div>

@@ -82,8 +82,7 @@ function QuizScreen(props) {
 
   return (
     <div className="screen-container quizscreen-container">
-      <button className="home-button" onClick={props.onHome}>
-      </button>
+      <button className="home-button" onClick={props.onHome}></button>
 
       <div className="quiz-elements">
         {/* Sets the question number based of the current index */}
