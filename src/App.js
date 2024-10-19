@@ -23,6 +23,17 @@ function App() {
     result: () => navigateTo("result"),
   };
 
+  // Function to handle navigation with a confirmation on the quiz screen
+  const handleHomeWithConfirmation = () => {
+    if (
+      window.confirm(
+        "Are you sure you want to go back home? Your progress will be lost.",
+      )
+    ) {
+      navigationHandlers.home(); // Navigate to home if confirmed
+    }
+  };
+
   /* Switch to determine which Screen component should be displayed, passes relevant setState through as props for the buttons within that screen */
   const renderScreen = () => {
     switch (screen) {
@@ -38,7 +49,7 @@ function App() {
       case "start":
         return (
           <QuizScreen
-            onHome={navigationHandlers.home}
+            onHome={handleHomeWithConfirmation}
             onResult={navigationHandlers.result}
             updateScore={updateScore}
           />
