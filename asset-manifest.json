@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hunterquiz/static/css/main.14c10bb5.css",
-    "main.js": "/hunterquiz/static/js/main.0a5275a2.js",
+    "main.css": "/hunterquiz/static/css/main.d671d532.css",
+    "main.js": "/hunterquiz/static/js/main.2bf19388.js",
     "static/js/453.43f72c4e.chunk.js": "/hunterquiz/static/js/453.43f72c4e.chunk.js",
     "static/media/ProtestRevolution-Regular.ttf": "/hunterquiz/static/media/ProtestRevolution-Regular.a1e49247209c98149261.ttf",
     "static/media/Kalam-Regular.ttf": "/hunterquiz/static/media/Kalam-Regular.831aaad03890ba2d7417.ttf",
@@ -12,12 +12,12 @@
     "static/media/kalam-regular-webfont.woff": "/hunterquiz/static/media/kalam-regular-webfont.8a962e3416964d61717a.woff",
     "static/media/kalam-regular-webfont.woff2": "/hunterquiz/static/media/kalam-regular-webfont.c49b5598294fbecab9d0.woff2",
     "index.html": "/hunterquiz/index.html",
-    "main.14c10bb5.css.map": "/hunterquiz/static/css/main.14c10bb5.css.map",
-    "main.0a5275a2.js.map": "/hunterquiz/static/js/main.0a5275a2.js.map",
+    "main.d671d532.css.map": "/hunterquiz/static/css/main.d671d532.css.map",
+    "main.2bf19388.js.map": "/hunterquiz/static/js/main.2bf19388.js.map",
     "453.43f72c4e.chunk.js.map": "/hunterquiz/static/js/453.43f72c4e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.14c10bb5.css",
-    "static/js/main.0a5275a2.js"
+    "static/css/main.d671d532.css",
+    "static/js/main.2bf19388.js"
   ]
 }
