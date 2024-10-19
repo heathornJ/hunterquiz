@@ -90,16 +90,27 @@ button {
   color: #ffffff;
   font-family: "protest_revolutionregular", Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 700;
+  transition:
+    filter 0.3s ease,
+    opacity 0.3s ease;
 }
 
 button:hover {
   color: rgb(255, 163, 97);
   cursor: pointer;
+  filter: brightness(1.2);
+  opacity: 0.9;
 }
 
 /* Fades the button out slightly when disabled */
 button:disabled {
   background-blend-mode: overlay;
+  transition: none;
+}
+
+button:disabled:hover {
+  filter: none;
+  opacity: 1;
 }
 
 /* Hides the hover effect when button is disabled. Must match color set for button style above. */
@@ -126,6 +137,14 @@ button:disabled:hover {
   height: 3em;
   width: 3em;
   background-image: url(./images/home-button-background.png);
+  transition:
+    filter 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.home-button:hover {
+  filter: brightness(1.2);
+  opacity: 0.9;
 }
 
 .nav-buttons {
