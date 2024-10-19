@@ -83,7 +83,6 @@ function QuizScreen(props) {
   return (
     <div className="screen-container quizscreen-container">
       <button className="home-button" onClick={props.onHome}>
-        {/*}<FontAwesomeIcon icon={faHouse} /> */}
       </button>
 
       <div className="quiz-elements">
