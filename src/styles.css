@@ -405,6 +405,12 @@ button:disabled:hover {
 
   /* HomeScreen */
 
+  .home-button {
+    left: 50%;
+    top: 5%;
+    transform: translate(-410%, 36%);
+  }
+
   /* HelpScreen */
 
   .help-content-background {
