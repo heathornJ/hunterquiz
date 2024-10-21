@@ -47,6 +47,7 @@ Welcome to my front end software developer project for an "Online Quiz". This RE
   - The current question number.
   - The question.
   - Answer buttons.
+  - Progress bar.
   - ![A screenshot of the quiz screen](./src/images/screenshots/quizscreen.png)
 
 - Once an answer is selected, the answers will become disabled and will turn green if it was correct and red if it was incorrect.
