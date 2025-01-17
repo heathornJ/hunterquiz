@@ -47,7 +47,7 @@ function ResultScreen(props) {
         </div>
         <div className="nav-buttons" id="result-nav-buttons">
           <StartButton
-            text={config.sections.StartButton.againText}
+            text={config.sections.startButton.again}
             onStart={props.onStart}
           />
           <button onClick={props.onHome}>Home</button>

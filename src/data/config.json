@@ -25,7 +25,8 @@
       "questionType": {
         "trueFalse": "true-false",
         "multiChoice": "multiple-choice"
-      }
+      },
+      "confirmation": "Are you sure you want to go back home? Your progress will be lost."
     },
     "resultScreen": {
       "resultIntro": "You answered ",
