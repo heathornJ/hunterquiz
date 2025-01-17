@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import config from "../data/config.json";
 
 /* PreviousButton component. Accepts state variable, state setter to move to the previous index in an array. */
 function PreviousButton({ currentIndex, setIndex }) {
@@ -11,7 +12,7 @@ function PreviousButton({ currentIndex, setIndex }) {
 
   return (
     <button onClick={handleNextClick} disabled={currentIndex === 0}>
-      Back
+      {config.sections.previousButton.back}
     </button>
   );
 }

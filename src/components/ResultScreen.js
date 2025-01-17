@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import StartButton from "./StartButton";
 import ranks from "../data/ranks";
 import questions from "../data/questions";
+import config from "../data/config.json";
 
 function ResultScreen(props) {
   const score = props.score;
@@ -31,10 +32,13 @@ function ResultScreen(props) {
           <div className="result-paragraph-background">
             <div className="result-paragraphs">
               <p>
-                You answered {score} questions correctly out of {maxScore}!
+                {config.sections.resultScreen.resultIntro} {score}
+                {config.sections.resultScreen.resultOutOf} {maxScore}
+                {config.sections.resultScreen.resultExclamation}
+                {}
               </p>
               <p>
-                This earns you the rank of:
+                {config.sections.resultScreen.resultRank}
                 <br />
                 {rank}
               </p>
@@ -42,7 +46,10 @@ function ResultScreen(props) {
           </div>
         </div>
         <div className="nav-buttons" id="result-nav-buttons">
-          <StartButton text="Try Again" onStart={props.onStart} />
+          <StartButton
+            text={config.sections.StartButton.againText}
+            onStart={props.onStart}
+          />
           <button onClick={props.onHome}>Home</button>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import config from "../data/config.json";
 
 /* Progress Tracker component. currentIndex of the question array and the total array length. */
 function ProgressTracker({ currentIndex, arrayLength }) {
@@ -14,7 +15,9 @@ function ProgressTracker({ currentIndex, arrayLength }) {
     <>
       <div className="progress-bar-border" aria-label="quiz progress bar">
         <div className="progress-bar-background">
-          <p className="progress-text">Progress</p>
+          <p className="progress-text">
+            {config.sections.progressTracker.progress}
+          </p>
           <div
             className="progress-bar-foreground"
             style={{ width: percentageWidth }}

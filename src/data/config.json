@@ -1,0 +1,46 @@
+{
+  "sections": {
+    "helpScreen": {
+      "header": "HELP",
+      "helpContent": [
+        "Welcome to the Hunter Quiz. To navigate through the help page and the quiz, select the 'next' button.",
+        "To go back to the home screen at any point, select the 'home' button in the top-left corner. To go back to the previous help tip, select the 'back' button.",
+        "To start the quiz, select the 'start' button on the home screen. This will give you your first question.",
+        "To select an answer, click on one of the answer buttons below. Pick carefully, you can't change your answer once you select it.",
+        "Once you select an answer, it will turn green if it's correct and red if it's incorrect. A 'next' button will appear which will take you to the next question.",
+        "Once you answer the final question, you'll see your total score and your hunter rank. Each question is worth 1 point.",
+        "When you're ready, select the home button and press 'start' to begin."
+      ]
+    },
+    "quizScreen": {
+      "header": "QUESTION",
+      "id": {
+        "correct": "correct-answer",
+        "incorrect": "incorrect-answer"
+      }
+    },
+    "resultScreen": {
+      "resultIntro": "You answered ",
+      "resultOutOf": " questions correctly out of ",
+      "resultExclamation": "! ",
+      "resultRank": "This earns you the rank of:"
+    },
+    "startButton": {
+      "start": "Start",
+      "again": "Try Again"
+    },
+    "nextButton": {
+      "next": "next",
+      "results": "See Results"
+    },
+    "helpButton": {
+      "help": "Help"
+    },
+    "previousButton": {
+      "back": "Back"
+    },
+    "progressTracker": {
+      "progress": "Progress"
+    }
+  }
+}

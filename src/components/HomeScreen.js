@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import StartButton from "./StartButton";
+import config from "../data/config.json";
 
 function HomeScreen(props) {
   return (
@@ -8,8 +9,13 @@ function HomeScreen(props) {
       <div className="home-elements">
         <h1>HUNTER QUIZ</h1>
         <div className="nav-buttons">
-          <StartButton text="Start" onStart={props.onStart} />
-          <button onClick={props.onHelp}>Help</button>
+          <StartButton
+            text={config.sections.startButton.start}
+            onStart={props.onStart}
+          />
+          <button onClick={props.onHelp}>
+            {config.sections.helpButton.help}
+          </button>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import questions from "../data/questions";
 import NextButton from "./NextButton";
 import ProgressTracker from "./ProgressTracker";
+import config from "../data/config.json";
 
 function QuizScreen(props) {
   //State for the question array index
@@ -41,12 +42,12 @@ function QuizScreen(props) {
     if (isCorrect) {
       props.updateScore();
       //Sets the id of button to correct-answer. CSS will modify this to appear green.
-      targetButton.id = "correct-answer";
+      targetButton.id = config.sections.quizScreen.id.correct;
     }
 
     if (!isCorrect) {
       //Sets the ide of button to incorrect-answer. CSS will modify this to appear red.
-      targetButton.id = "incorrect-answer";
+      targetButton.id = config.sections.quizScreen.id.incorrect;
     }
   };
 
@@ -86,7 +87,9 @@ function QuizScreen(props) {
 
       <div className="quiz-elements">
         {/* Sets the question number based of the current index */}
-        <h2>QUESTION {questionIndex + 1}</h2>
+        <h2>
+          {config.sections.quizScreen.header} {questionIndex + 1}
+        </h2>
 
         {/* Displays the question stored in the question object */}
         <div className="current-question-background">
@@ -119,7 +122,9 @@ function QuizScreen(props) {
             ""
           )}
           {showNextButton && questionIndex === questions.length - 1 ? (
-            <button onClick={props.onResult}>See Results</button>
+            <button onClick={props.onResult}>
+              {config.sections.nextButton.results}
+            </button>
           ) : (
             ""
           )}
