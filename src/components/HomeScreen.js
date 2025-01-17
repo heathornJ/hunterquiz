@@ -7,7 +7,7 @@ function HomeScreen(props) {
   return (
     <div className="screen-container homescreen-container">
       <div className="home-elements">
-        <h1>HUNTER QUIZ</h1>
+        <h1>{config.sections.homeScreen.heading}</h1>
         <div className="nav-buttons">
           <StartButton
             text={config.sections.startButton.start}

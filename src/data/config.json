@@ -1,7 +1,7 @@
 {
   "sections": {
     "helpScreen": {
-      "header": "HELP",
+      "heading": "HELP",
       "helpContent": [
         "Welcome to the Hunter Quiz. To navigate through the help page and the quiz, select the 'next' button.",
         "To go back to the home screen at any point, select the 'home' button in the top-left corner. To go back to the previous help tip, select the 'back' button.",
@@ -11,6 +11,9 @@
         "Once you answer the final question, you'll see your total score and your hunter rank. Each question is worth 1 point.",
         "When you're ready, select the home button and press 'start' to begin."
       ]
+    },
+    "homeScreen": {
+      "heading": "HUNTER QUIZ"
     },
     "quizScreen": {
       "header": "QUESTION",
