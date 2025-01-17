@@ -50,6 +50,12 @@
     },
     "progressTracker": {
       "progress": "Progress"
+    },
+    "screens": {
+      "home": "home",
+      "start": "start",
+      "help": "help",
+      "result": "result"
     }
   }
 }

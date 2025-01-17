@@ -16,13 +16,13 @@ const useScreenHandlers = () => {
   /* object containing functions used to setState on button click.
   Also resets the score when the telling the quiz to start */
   const navigationHandlers = {
-    home: () => navigateTo("home"),
+    home: () => navigateTo(config.sections.screens.home),
     start: () => {
       resetScore();
-      navigateTo("start");
+      navigateTo(config.sections.screens.start);
     },
-    help: () => navigateTo("help"),
-    result: () => navigateTo("result"),
+    help: () => navigateTo(config.sections.screens.help),
+    result: () => navigateTo(config.sections.screens.result),
   };
 
   const handleHomeWithConfirmation = (navigateToHome) => {
@@ -35,16 +35,16 @@ const useScreenHandlers = () => {
   /* Switch to determine which Screen component should be displayed, passes relevant setState through as props for the buttons within that screen */
   const renderScreen = () => {
     switch (screen) {
-      case "home":
+      case config.sections.screens.home:
         return (
           <HomeScreen
             onStart={navigationHandlers.start}
             onHelp={navigationHandlers.help}
           />
         );
-      case "help":
+      case config.sections.screens.help:
         return <HelpScreen onHome={navigationHandlers.home} />;
-      case "start":
+      case config.sections.screens.start:
         return (
           <QuizScreen
             onHome={() => handleHomeWithConfirmation(navigationHandlers.home)}
@@ -52,7 +52,7 @@ const useScreenHandlers = () => {
             updateScore={updateScore}
           />
         );
-      case "result":
+      case config.sections.screens.result:
         return (
           <ResultScreen
             onStart={navigationHandlers.start}
