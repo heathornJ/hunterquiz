@@ -1,4 +1,9 @@
+import config from "./config.json";
+
 //Array contains question objects. The object contains an answers property which is an array of answer objects.
+const trueFalse = config.sections.quizScreen.questionType.trueFalse;
+const multiChoice = config.sections.quizScreen.questionType.multiChoice;
+
 const questions = [
   {
     id: 0,
@@ -9,7 +14,7 @@ const questions = [
       { text: "Ice", isCorrect: false },
       { text: "Thunder", isCorrect: false },
     ],
-    type: "multiple-choice",
+    type: multiChoice,
   },
   {
     id: 1,
@@ -18,7 +23,7 @@ const questions = [
       { text: "True", isCorrect: false },
       { text: "False", isCorrect: true },
     ],
-    type: "true-false",
+    type: trueFalse,
   },
   {
     id: 2,
@@ -30,7 +35,7 @@ const questions = [
       { text: "Velkhana", isCorrect: false },
       { text: "Kushala Daora", isCorrect: false },
     ],
-    type: "multiple-choice",
+    type: multiChoice,
   },
   {
     id: 3,
@@ -41,7 +46,7 @@ const questions = [
       { text: "Royal Ludroth", isCorrect: false },
       { text: "Nargacuga", isCorrect: false },
     ],
-    type: "multiple-choice",
+    type: multiChoice,
   },
   {
     id: 4,
@@ -52,7 +57,7 @@ const questions = [
       { text: "Electrical Discharge", isCorrect: false },
       { text: "Poisonous Spikes", isCorrect: false },
     ],
-    type: "multiple-choice",
+    type: multiChoice,
   },
   {
     id: 5,
@@ -61,7 +66,7 @@ const questions = [
       { text: "True", isCorrect: false },
       { text: "False", isCorrect: true },
     ],
-    type: "true-false",
+    type: trueFalse,
   },
   {
     id: 6,
@@ -70,7 +75,7 @@ const questions = [
       { text: "True", isCorrect: true },
       { text: "False", isCorrect: false },
     ],
-    type: "true-false",
+    type: trueFalse,
   },
   {
     id: 7,
@@ -79,7 +84,7 @@ const questions = [
       { text: "True", isCorrect: false },
       { text: "False", isCorrect: true },
     ],
-    type: "true-false",
+    type: trueFalse,
   },
   {
     id: 8,
@@ -91,7 +96,7 @@ const questions = [
       { text: "Dragon Piercer", isCorrect: false },
       { text: "Clutch Claw", isCorrect: false },
     ],
-    type: "multiple-choice",
+    type: multiChoice,
   },
   {
     id: 9,
@@ -103,7 +108,7 @@ const questions = [
       { text: "Vaal Hazak", isCorrect: false },
       { text: "Jyuratodus", isCorrect: false },
     ],
-    type: "multiple-choice",
+    type: multiChoice,
   },
   {
     id: 10,
@@ -114,7 +119,7 @@ const questions = [
       { text: "Deviljho", isCorrect: false },
       { text: "Rajang", isCorrect: false },
     ],
-    type: "multiple-choice",
+    type: multiChoice,
   },
   {
     id: 11,
@@ -125,7 +130,7 @@ const questions = [
       { text: "Barioth", isCorrect: false },
       { text: "Brachydios", isCorrect: false },
     ],
-    type: "multiple-choice",
+    type: multiChoice,
   },
   {
     id: 12,
@@ -135,7 +140,7 @@ const questions = [
       { text: "True", isCorrect: true },
       { text: "False", isCorrect: false },
     ],
-    type: "true-false",
+    type: trueFalse,
   },
   {
     id: 13,
@@ -144,7 +149,7 @@ const questions = [
       { text: "True", isCorrect: true },
       { text: "False", isCorrect: false },
     ],
-    type: "true-false",
+    type: trueFalse,
   },
   {
     id: 14,
@@ -156,7 +161,7 @@ const questions = [
       { text: "Mega Potion", isCorrect: false },
       { text: "Carving Knife", isCorrect: false },
     ],
-    type: "multiple-choice",
+    type: multiChoice,
   },
 ];
 

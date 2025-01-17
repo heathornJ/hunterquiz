@@ -18,7 +18,11 @@
         "correct": "correct-answer",
         "incorrect": "incorrect-answer"
       },
-      "load": "Loading..."
+      "load": "Loading...",
+      "questionType": {
+        "trueFalse": "true-false",
+        "multiChoice": "multiple-choice"
+      }
     },
     "resultScreen": {
       "resultIntro": "You answered ",
