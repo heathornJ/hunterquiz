@@ -24,11 +24,17 @@ function QuizScreen(props) {
 
   // Fisher-Yates Sorting Algorithm used to randomise question order
   const shuffle = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
+    iterateThroughArrayLength(array.length, (i) => {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
-    }
+    });
     return array;
+  };
+
+  const iterateThroughArrayLength = (length, callback) => {
+    for (let i = length - 1; i > 0; i--) {
+      callback(i);
+    }
   };
 
   const handleAnswerClick = (event, isCorrect) => {
@@ -51,6 +57,10 @@ function QuizScreen(props) {
     }
   };
 
+  const hasQuestionsLoadFailed = () => {
+    return shuffledQuestions.length === 0 || !shuffledQuestions[questionIndex];
+  };
+
   // Shuffle called within useEffect so that it is only shuffled when the quizComponent is rendered, not re-rendered.
   useEffect(() => {
     const shuffledArray = shuffle([...questions]); // Avoids modifying the original questions array.
@@ -61,7 +71,7 @@ function QuizScreen(props) {
        Only attempts to shuffle answers when the questions are shuffled.
     */
   useEffect(() => {
-    if (shuffledQuestions.length > 0) {
+    if (!hasQuestionsLoadFailed()) {
       if (currentQuestion.type === "multiple-choice") {
         setShuffledAnswers(shuffle(currentQuestion.answers));
       } else {
@@ -77,8 +87,8 @@ function QuizScreen(props) {
   }, [questionIndex, shuffledQuestions]);
 
   //Protects against shuffledQuestions to being ready until after first render
-  if (shuffledQuestions.length === 0 || !shuffledQuestions[questionIndex]) {
-    return <div>Loading...</div>;
+  if (hasQuestionsLoadFailed()) {
+    return <div>{config.sections.quizScreen.load}</div>;
   }
 
   return (

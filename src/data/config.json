@@ -17,7 +17,8 @@
       "id": {
         "correct": "correct-answer",
         "incorrect": "incorrect-answer"
-      }
+      },
+      "load": "Loading..."
     },
     "resultScreen": {
       "resultIntro": "You answered ",
