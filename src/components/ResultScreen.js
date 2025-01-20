@@ -28,7 +28,7 @@ function ResultScreen(props) {
     <div className="screen-container resultscreen-container">
       <div className="result-elements">
         <div className="result-text-container">
-          <h2>Results</h2>
+          <h2>{config.sections.resultScreen.heading}</h2>
           <div className="result-paragraph-background">
             <div className="result-paragraphs">
               <p>
@@ -50,7 +50,9 @@ function ResultScreen(props) {
             text={config.sections.startButton.again}
             onStart={props.onStart}
           />
-          <button onClick={props.onHome}>Home</button>
+          <button onClick={props.onHome}>
+            {config.sections.resultScreen.home}
+          </button>
         </div>
       </div>
     </div>

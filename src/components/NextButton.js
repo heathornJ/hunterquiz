@@ -11,9 +11,11 @@ function NextButton({
   setButtonDisabled,
 }) {
   const maxIndex = arrayLength - 1;
+  const indexIncrease = 1;
+
   const handleNextClick = () => {
     if (currentIndex < maxIndex) {
-      setIndex(currentIndex + 1);
+      setIndex(currentIndex + indexIncrease);
     }
 
     //If setShowNextButton is passed as a prop, the next button will be hidden after it is pressed on the QuizScreen

@@ -5,9 +5,11 @@ import config from "../data/config.json";
 /* PreviousButton component. Accepts state variable, state setter to move to the previous index in an array. */
 function PreviousButton({ currentIndex, setIndex }) {
   const firstIndex = 0;
+  const indexDecrease = 1;
+
   const handleNextClick = () => {
     if (currentIndex > firstIndex) {
-      setIndex(currentIndex - 1);
+      setIndex(currentIndex - indexDecrease);
     }
   };
 

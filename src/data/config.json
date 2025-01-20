@@ -32,7 +32,9 @@
       "resultIntro": "You answered ",
       "resultOutOf": " questions correctly out of ",
       "resultExclamation": "! ",
-      "resultRank": "This earns you the rank of:"
+      "resultRank": "This earns you the rank of:",
+      "heading": "RESULTS",
+      "home": "Home"
     },
     "startButton": {
       "start": "Start",
