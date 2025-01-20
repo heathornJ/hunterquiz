@@ -57,8 +57,18 @@ function QuizScreen(props) {
     }
   };
 
+  // Checks the shuffledQuestions array length and current index for content to see if questions have loaded.
   const hasQuestionsLoadFailed = () => {
     return shuffledQuestions.length === 0 || !shuffledQuestions[questionIndex];
+  };
+
+  // Checks if the current question  is the final question based on the current index vs the length of the array.
+  const isFinalQuestion = () => {
+    return questionIndex >= questions.length - 1;
+  };
+
+  const increaseQuestionHeading = () => {
+    return questionIndex + 1;
   };
 
   // Shuffle called within useEffect so that it is only shuffled when the quizComponent is rendered, not re-rendered.
@@ -72,7 +82,10 @@ function QuizScreen(props) {
     */
   useEffect(() => {
     if (!hasQuestionsLoadFailed()) {
-      if (currentQuestion.type === "multiple-choice") {
+      if (
+        currentQuestion.type ===
+        config.sections.quizScreen.questionType.multiChoice
+      ) {
         setShuffledAnswers(shuffle(currentQuestion.answers));
       } else {
         setShuffledAnswers(currentQuestion.answers);
@@ -98,7 +111,7 @@ function QuizScreen(props) {
       <div className="quiz-elements">
         {/* Sets the question number based of the current index */}
         <h2>
-          {config.sections.quizScreen.header} {questionIndex + 1}
+          {config.sections.quizScreen.heading} {increaseQuestionHeading()}
         </h2>
 
         {/* Displays the question stored in the question object */}
@@ -120,7 +133,7 @@ function QuizScreen(props) {
         </div>
         <div className="nav-buttons">
           {/* Only renders the NextButton component if the showNextButton true & it is not the final question. Prevents the user from moving to the next question without selecting an answer first */}
-          {showNextButton && questionIndex < questions.length - 1 ? (
+          {showNextButton && !isFinalQuestion() ? (
             <NextButton
               currentIndex={questionIndex}
               setIndex={setQuestionIndex}
@@ -131,7 +144,7 @@ function QuizScreen(props) {
           ) : (
             ""
           )}
-          {showNextButton && questionIndex === questions.length - 1 ? (
+          {showNextButton && isFinalQuestion() ? (
             <button onClick={props.onResult}>
               {config.sections.nextButton.results}
             </button>

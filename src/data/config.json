@@ -16,7 +16,7 @@
       "heading": "HUNTER QUIZ"
     },
     "quizScreen": {
-      "header": "QUESTION",
+      "heading": "QUESTION",
       "id": {
         "correct": "correct-answer",
         "incorrect": "incorrect-answer"
@@ -39,7 +39,7 @@
       "again": "Try Again"
     },
     "nextButton": {
-      "next": "next",
+      "next": "Next",
       "results": "See Results"
     },
     "helpButton": {
